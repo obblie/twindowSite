@@ -1,6 +1,15 @@
 /** @type {import('next').NextConfig} */
+const isProduction = process.env.NODE_ENV === "production";
+const repoName = "twindowSite";
+
 const nextConfig = {
-  reactStrictMode: true
+  reactStrictMode: true,
+  output: "export",
+  images: {
+    unoptimized: true
+  },
+  basePath: isProduction ? `/${repoName}` : "",
+  assetPrefix: isProduction ? `/${repoName}/` : undefined
 };
 
 export default nextConfig;
