@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --surface: 220 35% 7%;
+  --card: 220 28% 11%;
+  --border: 215 24% 24%;
+  --foreground: 210 22% 94%;
+  --muted: 214 13% 67%;
+  --accent: 187 92% 55%;
+  --accent-foreground: 218 34% 10%;
+  --shadow: 215 60% 2%;
+  --ring: 187 92% 55%;
+  --font-sans: "Manrope";
+  --font-mono: "JetBrains Mono";
+}
+
+:root.light {
+  color-scheme: light;
+  --surface: 210 38% 98%;
+  --card: 0 0% 100%;
+  --border: 214 24% 86%;
+  --foreground: 220 28% 14%;
+  --muted: 220 11% 42%;
+  --accent: 191 93% 39%;
+  --accent-foreground: 0 0% 98%;
+  --shadow: 215 20% 38%;
+  --ring: 191 93% 39%;
+}
+
+* {
+  @apply border-border;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-surface text-foreground antialiased;
+  background-image: radial-gradient(circle at 0% 10%, hsl(var(--accent) / 0.16), transparent 40%),
+    radial-gradient(circle at 100% 20%, hsl(210 95% 52% / 0.1), transparent 34%),
+    linear-gradient(180deg, hsl(var(--surface)), hsl(var(--surface)) 60%, hsl(var(--surface) / 0.95));
+  min-height: 100vh;
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-content px-6 md:px-10;
+  }
+
+  .section-wrap {
+    @apply container-shell py-12 md:py-16;
+  }
+
+  .kicker {
+    @apply font-mono text-xs uppercase tracking-[0.18em] text-accent;
+  }
+
+  .card-surface {
+    @apply rounded-2xl border border-border/70 bg-card/70 shadow-soft backdrop-blur;
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--ring))] focus-visible:ring-offset-2 focus-visible:ring-offset-surface;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

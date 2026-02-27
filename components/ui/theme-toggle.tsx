@@ -1,0 +1,40 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
+export function ThemeToggle() {
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
+
+  useEffect(() => {
+    const root = document.documentElement;
+    const savedTheme = localStorage.getItem("twindow-theme");
+    if (savedTheme === "light" || savedTheme === "dark") {
+      setTheme(savedTheme);
+      root.classList.toggle("light", savedTheme === "light");
+      return;
+    }
+
+    const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    const initialTheme: "light" | "dark" = systemPrefersLight ? "light" : "dark";
+    setTheme(initialTheme);
+    root.classList.toggle("light", initialTheme === "light");
+  }, []);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === "dark" ? "light" : "dark";
+    setTheme(nextTheme);
+    document.documentElement.classList.toggle("light", nextTheme === "light");
+    localStorage.setItem("twindow-theme", nextTheme);
+  };
+
+  return (
+    <button
+      type="button"
+      onClick={toggleTheme}
+      className="focus-ring rounded-lg border border-border bg-card/70 px-3 py-2 text-xs font-medium text-foreground/90"
+      aria-label="Toggle light mode"
+    >
+      {theme === "dark" ? "Light mode" : "Dark mode"}
+    </button>
+  );
+}

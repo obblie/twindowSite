@@ -1,0 +1,62 @@
+import { Reveal } from "@/components/ui/reveal";
+import { SectionHeading } from "@/components/ui/section-heading";
+
+const features = [
+  {
+    label: "Selective window duplication",
+    copy: "Choose specific apps/windows to Twindow, instead of sharing your whole display."
+  },
+  {
+    label: "Passive duplicate",
+    copy: "Twindows are view-only with no input passthrough."
+  },
+  {
+    label: "Extended desktop native",
+    copy: "Designed for extended desktop, not full-screen mirroring workflows."
+  },
+  {
+    label: "Privacy-first",
+    copy: "Avoid exposing your full desktop during demos, presentations, and streams."
+  },
+  {
+    label: "Multi-window support",
+    copy: "Create multiple Twindows, like editor + slides + notes."
+  },
+  {
+    label: "Demo mode (planned)",
+    copy: "Optional watermark or border to clearly mark mirrored Twindows."
+  },
+  {
+    label: "Pro controls (coming soon)",
+    copy: "FPS, scaling, and hotkeys for precise performance workflows."
+  }
+];
+
+function DotIcon() {
+  return <span className="inline-block size-2 rounded-full bg-accent shadow-[0_0_16px_hsl(var(--accent)/0.7)]" aria-hidden="true" />;
+}
+
+export function FeatureGridSection() {
+  return (
+    <section id="features" className="section-wrap">
+      <SectionHeading
+        kicker="Features"
+        title="Control exactly what appears on screen"
+        description="Core controls now, pro workflow upgrades on the roadmap."
+      />
+
+      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {features.map((feature, index) => (
+          <Reveal key={feature.label} delay={index * 0.03} className="card-surface p-5">
+            <div className="flex items-center gap-2">
+              <DotIcon />
+              <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-accent">Twindow</p>
+            </div>
+            <h3 className="mt-4 text-base font-semibold">{feature.label}</h3>
+            <p className="mt-2 text-sm text-muted">{feature.copy}</p>
+          </Reveal>
+        ))}
+      </div>
+    </section>
+  );
+}
