@@ -38,7 +38,7 @@ export function TopNav() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-surface/75 backdrop-blur-xl">
-      <div className="container-shell flex h-16 items-center justify-between gap-4">
+      <div className="container-shell flex h-14 items-center justify-between gap-3 md:h-16 md:gap-4">
         <a href="#hero" className="focus-ring inline-flex items-center gap-2 rounded-lg px-2 py-1">
           <span className="font-mono text-xs uppercase tracking-[0.18em] text-accent">Twindow</span>
           <span className="hidden text-sm text-muted sm:inline">Mirror apps, not your life.</span>

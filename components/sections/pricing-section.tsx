@@ -14,10 +14,10 @@ export function PricingSection() {
         description="Early supporters get a lifetime discount. Pricing subject to change."
       />
 
-      <div className="mt-10 grid gap-5 lg:grid-cols-2">
-        <Reveal className="card-surface p-7">
+      <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-5 lg:grid-cols-2">
+        <Reveal className="card-surface p-5 sm:p-7">
           <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Standard</p>
-          <p className="mt-4 text-4xl font-bold">$29</p>
+          <p className="mt-3 text-3xl font-bold sm:mt-4 sm:text-4xl">$29</p>
           <p className="mt-2 text-sm text-muted">One-time license, core duplication workflow.</p>
           <ul className="mt-6 space-y-2 text-sm text-muted">
             {standard.map((item) => (
@@ -29,9 +29,9 @@ export function PricingSection() {
           </Button>
         </Reveal>
 
-        <Reveal className="card-surface border-accent/45 p-7" delay={0.08}>
+        <Reveal className="card-surface border-accent/45 p-5 sm:p-7" delay={0.08}>
           <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Pro (coming soon)</p>
-          <p className="mt-4 text-4xl font-bold">TBD</p>
+          <p className="mt-3 text-3xl font-bold sm:mt-4 sm:text-4xl">TBD</p>
           <p className="mt-2 text-sm text-muted">Advanced controls for power users and studios.</p>
           <ul className="mt-6 space-y-2 text-sm text-muted">
             {pro.map((item) => (

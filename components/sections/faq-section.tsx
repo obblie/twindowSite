@@ -24,10 +24,10 @@ export function FAQSection() {
   return (
     <section id="faq" className="section-wrap">
       <SectionHeading kicker="FAQ" title="Common questions" />
-      <div className="mt-10 space-y-4">
+      <div className="mt-8 space-y-3 sm:mt-10 sm:space-y-4">
         {faqs.map((faq, index) => (
-          <Reveal key={faq.q} delay={index * 0.03} className="card-surface p-6">
-            <h3 className="text-lg font-semibold">{faq.q}</h3>
+          <Reveal key={faq.q} delay={index * 0.03} className="card-surface p-5 sm:p-6">
+            <h3 className="text-base font-semibold sm:text-lg">{faq.q}</h3>
             <p className="mt-2 text-sm text-muted">{faq.a}</p>
           </Reveal>
         ))}

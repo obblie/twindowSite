@@ -8,40 +8,42 @@ import { withBasePath } from "@/lib/base-path";
 
 export function HeroSection() {
   return (
-    <section id="hero" className="relative overflow-hidden pt-12">
-      <div className="section-wrap pb-12">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.1fr,0.9fr]">
+    <section id="hero" className="relative overflow-hidden pt-8 md:pt-12">
+      <div className="section-wrap pb-10 md:pb-12">
+        <div className="grid items-center gap-10 md:gap-12 lg:grid-cols-[1.1fr,0.9fr]">
           <Reveal className="space-y-7">
             <p className="kicker">macOS utility</p>
             <div className="space-y-5">
-              <h1 className="max-w-2xl text-4xl font-extrabold tracking-tight md:text-6xl">
+              <h1 className="max-w-2xl text-3xl font-extrabold tracking-tight sm:text-4xl md:text-6xl">
                 Twindow
                 <span className="block text-accent">Mirror apps, not your life.</span>
               </h1>
-              <p className="max-w-2xl text-lg text-muted md:text-xl">
+              <p className="max-w-2xl text-base text-muted sm:text-lg md:text-xl">
                 Twindows are non-interactive (read only) duplicates of any app window. Move your Twindows to 
                 a second display to avoid exposing your desktop, keeping your personal workspace private.
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-3">
-              <Button href="#pricing">Download</Button>
-              <Button href="#hero-demo" variant="secondary">
+            <div className="grid gap-3 sm:flex sm:flex-wrap">
+              <Button href="#pricing" className="w-full sm:w-auto">
+                Download
+              </Button>
+              <Button href="#hero-demo" variant="secondary" className="w-full sm:w-auto">
                 Watch demo
               </Button>
-              <Button href="#features" variant="ghost">
+              <Button href="#features" variant="ghost" className="w-full sm:w-auto">
                 Explore features
               </Button>
             </div>
 
-            <div className="card-surface inline-flex items-start gap-3 p-4 text-sm">
+            <div className="card-surface flex items-start gap-3 p-4 text-sm">
               <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-accent">Privacy Note</span>
               <p className="text-muted">No screen recording. No account. Local-only duplication.</p>
             </div>
           </Reveal>
 
           <Reveal delay={0.08}>
-            <div className="card-surface mx-auto w-[510px] max-w-full space-y-5 p-6">
+            <div className="card-surface mx-auto w-full max-w-[510px] space-y-5 p-5 sm:p-6">
               <div className="relative overflow-hidden rounded-2xl bg-surface/70">
                 <Image
                   src={withBasePath("/twindowBox.png")}
@@ -69,7 +71,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="relative left-1/2 w-screen -translate-x-1/2 px-6 pb-10 md:px-10 md:pb-20">
+      <div className="relative left-1/2 w-screen -translate-x-1/2 px-4 pb-8 md:px-10 md:pb-20">
         <div className="mx-auto w-full max-w-[110rem]">
           <HeroMedia />
         </div>

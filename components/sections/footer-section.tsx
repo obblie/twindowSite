@@ -17,7 +17,7 @@ export function FooterSection() {
             <p>Email: hello@twindow.app</p>
             <p>Socials: @twindowapp (X, YouTube, GitHub)</p>
           </div>
-          <div className="text-right">
+          <div className="text-left md:text-right">
             <p>Privacy note: Local-only duplication. No account required.</p>
             <p>© {new Date().getFullYear()} Twindow. All rights reserved.</p>
           </div>

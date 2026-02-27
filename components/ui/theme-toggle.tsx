@@ -34,7 +34,8 @@ export function ThemeToggle() {
       className="focus-ring rounded-lg border border-border bg-card/70 px-3 py-2 text-xs font-medium text-foreground/90"
       aria-label="Toggle light mode"
     >
-      {theme === "dark" ? "Light mode" : "Dark mode"}
+      <span className="sm:hidden">{theme === "dark" ? "Light" : "Dark"}</span>
+      <span className="hidden sm:inline">{theme === "dark" ? "Light mode" : "Dark mode"}</span>
     </button>
   );
 }

@@ -45,14 +45,14 @@ export function FeatureGridSection() {
         description="Core controls now, pro workflow upgrades on the roadmap."
       />
 
-      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-8 grid gap-3 sm:mt-10 sm:gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {features.map((feature, index) => (
-          <Reveal key={feature.label} delay={index * 0.03} className="card-surface p-5">
+          <Reveal key={feature.label} delay={index * 0.03} className="card-surface p-4 sm:p-5">
             <div className="flex items-center gap-2">
               <DotIcon />
               <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-accent">Twindow</p>
             </div>
-            <h3 className="mt-4 text-base font-semibold">{feature.label}</h3>
+            <h3 className="mt-3 text-base font-semibold sm:mt-4">{feature.label}</h3>
             <p className="mt-2 text-sm text-muted">{feature.copy}</p>
           </Reveal>
         ))}
