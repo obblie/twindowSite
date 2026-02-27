@@ -31,7 +31,7 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={toggleTheme}
-      className="focus-ring rounded-lg border border-border bg-card/70 px-3 py-2 text-xs font-medium text-foreground/90"
+      className="focus-ring rounded-lg border border-border bg-card/70 px-3 py-2 font-mono text-[11px] uppercase tracking-[0.14em] text-foreground/90"
       aria-label="Toggle light mode"
     >
       <span className="sm:hidden">{theme === "dark" ? "Light" : "Dark"}</span>
