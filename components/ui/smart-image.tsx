@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { withBasePath } from "@/lib/base-path";
 
 type SmartImageProps = {
   src: string;
@@ -23,6 +24,7 @@ export function SmartImage({
   fallbackLabel = "Placeholder"
 }: SmartImageProps) {
   const [failed, setFailed] = useState(false);
+  const resolvedSrc = withBasePath(src);
 
   if (failed) {
     return (
@@ -38,7 +40,7 @@ export function SmartImage({
 
   return (
     <Image
-      src={src}
+      src={resolvedSrc}
       alt={alt}
       className={className}
       fill={fill}

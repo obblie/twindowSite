@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { HeroMedia } from "@/components/ui/hero-media";
 import { Reveal } from "@/components/ui/reveal";
+import { withBasePath } from "@/lib/base-path";
 
 export function HeroSection() {
   return (
@@ -43,7 +44,7 @@ export function HeroSection() {
             <div className="card-surface mx-auto w-[510px] max-w-full space-y-5 p-6">
               <div className="relative overflow-hidden rounded-2xl bg-surface/70">
                 <Image
-                  src="/twindowBox.png"
+                  src={withBasePath("/twindowBox.png")}
                   alt="Twindow app box art"
                   width={1200}
                   height={900}
