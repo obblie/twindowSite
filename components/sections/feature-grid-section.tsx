@@ -4,11 +4,11 @@ import { SectionHeading } from "@/components/ui/section-heading";
 const features = [
   {
     label: "Selective window duplication",
-    copy: "Choose specific apps/windows to Twindow, instead of sharing your whole display."
+    copy: "Choose specific application windows to share, instead of sharing your whole display."
   },
   {
     label: "Passive duplicate",
-    copy: "Twindows are view-only with no input passthrough."
+    copy: "Twindows are read-only with no input passthrough."
   },
   {
     label: "Extended desktop native",
@@ -21,14 +21,6 @@ const features = [
   {
     label: "Multi-window support",
     copy: "Create multiple Twindows, like editor + slides + notes."
-  },
-  {
-    label: "Demo mode (planned)",
-    copy: "Optional watermark or border to clearly mark mirrored Twindows."
-  },
-  {
-    label: "Pro controls (coming soon)",
-    copy: "FPS, scaling, and hotkeys for precise performance workflows."
   }
 ];
 
@@ -50,7 +42,7 @@ export function FeatureGridSection() {
           <Reveal key={feature.label} delay={index * 0.03} className="card-surface p-4 sm:p-5">
             <div className="flex items-center gap-2">
               <DotIcon />
-              <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-accent">Twindow</p>
+              <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-accent">[Never Mirror Your Desktop]</p>
             </div>
             <h3 className="mt-3 text-base font-semibold sm:mt-4">{feature.label}</h3>
             <p className="mt-2 text-sm text-muted">{feature.copy}</p>
