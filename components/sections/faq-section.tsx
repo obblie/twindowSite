@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: "Does it capture keystrokes?",
-    a: "No. Twindows are view-only and do not pass input through."
+    a: "No. Twindows are read-only and do not pass input through."
   },
   {
     q: "Will it work with Zoom?",

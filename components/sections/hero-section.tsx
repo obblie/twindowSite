@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { HeroMedia } from "@/components/ui/hero-media";
 import { Reveal } from "@/components/ui/reveal";
 import { withBasePath } from "@/lib/base-path";
 
@@ -21,7 +20,7 @@ export function HeroSection() {
               </h1>
               <p className="text-base text-muted sm:text-lg md:text-xl">
                 Twindows are read only duplicates of application windows. Move Twindows to 
-                a second display to avoid exposing your desktop, keeping your interactive applications in front of you, and your personal workspace private.
+                a 2nd display to avoid exposing your desktop, keeping your interactive applications in front of you, and your personal workspace private.
               </p>
             </div>
 
@@ -33,14 +32,18 @@ export function HeroSection() {
                 <Button href="#hero-demo" variant="secondary" className="w-full sm:w-auto">
                   Watch demo
                 </Button>
-                <Button href="#features" variant="ghost" className="w-full sm:w-auto">
+                <Button
+                  href="#features"
+                  variant="ghost"
+                  className="w-full border border-border/70 bg-card/40 text-foreground hover:bg-card/70 sm:w-auto"
+                >
                   Explore features
                 </Button>
               </div>
 
-              <div className="card-surface flex items-start gap-3 p-4 text-sm md:p-5">
+              <div className="card-surface inline-flex w-fit max-w-full items-start gap-3 self-start p-4 text-sm md:p-5">
                 <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-accent">Privacy Note</span>
-                <p className="text-muted">No screen recording. No account required. Local duplication. Privacy, simplied.</p>
+                <p className="text-muted">No account required. Local duplication. Privacy first, always.</p>
               </div>
             </div>
           </Reveal>
@@ -73,12 +76,6 @@ export function HeroSection() {
               </div>
             </div>
           </Reveal>
-        </div>
-      </div>
-
-      <div className="pb-8 md:pb-20">
-        <div className="mx-auto w-full max-w-[110rem] px-4 md:px-10">
-          <HeroMedia />
         </div>
       </div>
     </section>
