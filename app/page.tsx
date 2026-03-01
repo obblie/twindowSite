@@ -4,6 +4,8 @@ import { FeatureGridSection } from "@/components/sections/feature-grid-section";
 import { FooterSection } from "@/components/sections/footer-section";
 import { HeroSection } from "@/components/sections/hero-section";
 import { PricingSection } from "@/components/sections/pricing-section";
+import { TestimonialsSection } from "@/components/sections/testimonials-section";
+import { HeroMedia } from "@/components/ui/hero-media";
 
 export default function Page() {
   return (
@@ -11,9 +13,11 @@ export default function Page() {
       <TopNav />
       <main>
         <HeroSection />
-        <FeatureGridSection />
+        <HeroMedia />
         <PricingSection />
+        <FeatureGridSection />
         <FAQSection />
+        <TestimonialsSection />
       </main>
       <FooterSection />
     </>
