@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 const features = [
   {
     label: "Privacy First",
-    copy: "Never share your desktop again in in-person presentations!"
+    copy: "Never share your desktop again!"
   },
   {
     label: "Passive Duplicate Windows",

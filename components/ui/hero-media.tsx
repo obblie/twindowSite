@@ -6,7 +6,7 @@ import { withBasePath } from "@/lib/base-path";
 export function HeroMedia() {
   return (
     <section id="hero-demo" className="px-3 py-12 md:px-5 md:py-16">
-      <div className="mx-auto w-full max-w-[120rem]">
+      <div className="mx-auto w-full max-w-[96rem]">
         <SectionHeading
           kicker="Demo"
           title="Never share your desktop again"
@@ -16,12 +16,12 @@ export function HeroMedia() {
 
         <Reveal
           delay={0.06}
-          className="relative mt-8 overflow-hidden border border-border/80 bg-card/80 p-1 shadow-panel sm:mt-10 md:p-1.5"
+          className="relative mt-8 overflow-hidden border border-border/80 bg-card/80 shadow-panel sm:mt-10"
         >
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-accent/20 via-transparent to-cyan-400/15" />
-          <div className="relative aspect-[16/9] overflow-hidden border border-border/70 bg-surface">
+          <div className="relative aspect-[16/9] overflow-hidden">
             <LazyVideo
-              className="h-full w-full object-cover"
+              className="absolute inset-0 h-full w-full object-contain"
               poster={withBasePath("/twindowAd.png")}
               ariaLabel="Twindow product demo video"
               sources={[
