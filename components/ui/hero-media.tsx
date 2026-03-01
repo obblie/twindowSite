@@ -1,45 +1,46 @@
+import { LazyVideo } from "@/components/ui/lazy-video";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { withBasePath } from "@/lib/base-path";
 
 export function HeroMedia() {
   return (
-    <section id="hero-demo" className="section-wrap pt-0 md:pt-2">
-      <SectionHeading
-        kicker="Demo"
-        title="See Twindow on a real second-screen workflow"
-        description="A short product loop showing passive duplicate windows in motion, without sending viewers out to another platform."
-      />
+    <section id="hero-demo" className="px-3 py-12 md:px-5 md:py-16">
+      <div className="mx-auto w-full max-w-[120rem]">
+        <SectionHeading
+          kicker="Demo"
+          title="Never share your desktop again"
+          description="Create a Twindow in seconds, and drag it to your second display. Breathe easy 🧘‍♀️ "
+          className="px-1 md:px-2"
+        />
 
-      <Reveal
-        delay={0.06}
-        className="relative mt-8 overflow-hidden rounded-[2rem] border border-border/80 bg-card/80 p-2 shadow-panel sm:mt-10"
-      >
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-accent/20 via-transparent to-cyan-400/15" />
-        <div className="relative aspect-[16/9] overflow-hidden rounded-[1.6rem] border border-border/70 bg-surface">
-          <video
-            className="h-full w-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            poster={withBasePath("/twindowAd.png")}
-            aria-label="Twindow product demo video"
-          >
-            <source src={withBasePath("/TwindowDemo.mp4")} type="video/mp4" />
-          </video>
+        <Reveal
+          delay={0.06}
+          className="relative mt-8 overflow-hidden border border-border/80 bg-card/80 p-1 shadow-panel sm:mt-10 md:p-1.5"
+        >
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-accent/20 via-transparent to-cyan-400/15" />
+          <div className="relative aspect-[16/9] overflow-hidden border border-border/70 bg-surface">
+            <LazyVideo
+              className="h-full w-full object-cover"
+              poster={withBasePath("/twindowAd.png")}
+              ariaLabel="Twindow product demo video"
+              sources={[
+                { src: withBasePath("/TwindowDemo.webm"), type: "video/webm" },
+                { src: withBasePath("/TwindowDemo.mp4"), type: "video/mp4" }
+              ]}
+            />
 
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-5">
-            <p className="inline-flex rounded-full border border-border/70 bg-surface/80 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-accent backdrop-blur">
-              Passive duplicate window
-            </p>
-            <p className="hidden rounded-full border border-border/70 bg-surface/80 px-3 py-1 text-xs text-muted backdrop-blur sm:inline-flex">
-              Native HTML video
-            </p>
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-5">
+              <p className="inline-flex rounded-full border border-border/70 bg-surface/80 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-accent backdrop-blur">
+                Passive duplicate window
+              </p>
+              <p className="hidden rounded-full border border-border/70 bg-surface/80 px-3 py-1 text-xs text-muted backdrop-blur sm:inline-flex">
+                Native HTML video
+              </p>
+            </div>
           </div>
-        </div>
-      </Reveal>
+        </Reveal>
+      </div>
     </section>
   );
 }
