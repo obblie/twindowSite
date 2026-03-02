@@ -19,14 +19,13 @@ export function HeroMedia() {
           className="relative mt-8 overflow-hidden border border-border/80 bg-card/80 shadow-panel sm:mt-10"
         >
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-accent/20 via-transparent to-cyan-400/15" />
-          <div className="relative aspect-[16/9] overflow-hidden">
+          <div className="relative overflow-hidden">
             <LazyVideo
-              className="absolute inset-0 h-full w-full object-contain"
+              className="block h-auto w-full bg-transparent"
               poster={withBasePath("/twindowAd.png")}
               ariaLabel="Twindow product demo video"
               sources={[
-                { src: withBasePath("/TwindowDemo.webm"), type: "video/webm" },
-                { src: withBasePath("/TwindowDemo.mp4"), type: "video/mp4" }
+                { src: withBasePath("/TwindowDemo.mp4?v=20260301-2"), type: "video/mp4" }
               ]}
             />
 
