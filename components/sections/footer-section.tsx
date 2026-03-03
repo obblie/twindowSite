@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export function FooterSection() {
@@ -12,12 +13,20 @@ export function FooterSection() {
           <Button href="#pricing">Download twindow</Button>
         </div>
 
-        <div className="flex flex-col justify-between gap-4 text-sm text-muted md:flex-row md:items-center">
+        <div className="flex flex-col justify-between gap-6 text-sm text-muted md:flex-row md:items-center">
           <div>
             <p>Email: hello@twindow.app</p>
             <p>Socials: @twindowapp (X, YouTube, GitHub)</p>
           </div>
-          <div className="text-left md:text-right">
+          <div className="flex flex-col gap-3 text-left md:items-end md:text-right">
+            <nav aria-label="Legal" className="flex flex-wrap gap-x-4 gap-y-2">
+              <Link href="/terms" className="focus-ring rounded text-muted transition hover:text-foreground">
+                Terms of Service
+              </Link>
+              <Link href="/return-policy" className="focus-ring rounded text-muted transition hover:text-foreground">
+                Return Policy
+              </Link>
+            </nav>
             <p>Privacy note: Local-only duplication. No account required.</p>
             <p>© {new Date().getFullYear()} twindow. All rights reserved.</p>
           </div>
