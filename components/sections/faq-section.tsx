@@ -4,19 +4,19 @@ import { SectionHeading } from "@/components/ui/section-heading";
 const faqs = [
   {
     q: "Is it screen mirroring?",
-    a: "Not full-screen mirroring. Twindow is selective duplication of specific app windows."
+    a: "Not full-screen mirroring. twindow is selective duplication of specific app windows."
   },
   {
     q: "Does it record my screen?",
-    a: "No. Twindow does not record your screen."
+    a: "No. twindow does not record your screen."
   },
   {
     q: "Does it capture keystrokes?",
-    a: "No. Twindows are read-only and do not pass input through."
+    a: "No. twindows are read-only and do not pass input through."
   },
   {
     q: "Will it work with Zoom?",
-    a: "Twindow helps you prepare what to share on a second monitor, but it is not a Zoom plugin."
+    a: "twindow helps you prepare what to share on a second monitor, but it is not a Zoom plugin."
   }
 ];
 

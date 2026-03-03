@@ -13,13 +13,13 @@ export function HeroSection() {
           <Reveal className="flex h-full flex-col justify-between gap-9 md:gap-10">
             <div className="max-w-[42rem] space-y-6 md:space-y-7">
               <h1 className="w-full text-[3.7rem] font-extrabold leading-[0.92] tracking-tight sm:text-[4.7rem] md:text-[6.9rem]">
-                <span className="block text-[1.18em] text-foreground md:text-[1.24em]">Twindow</span>
+                <span className="block text-[1.18em] text-foreground md:text-[1.24em]">twindow</span>
                 <span className="block text-[0.95em] font-bold leading-[1.02] text-accent">
                   mirror apps, not your life.
                 </span>
               </h1>
               <p className="text-base text-muted sm:text-lg md:text-xl">
-                Twindows are read only duplicates of application windows. Move Twindows to 
+                twindows are read only duplicates of application windows. Move twindows to 
                 a 2nd display to avoid exposing your desktop, keeping your interactive applications in front of you, and your personal workspace private.
               </p>
             </div>
@@ -53,7 +53,7 @@ export function HeroSection() {
               <div className="relative overflow-hidden rounded-2xl bg-surface/70">
                 <Image
                   src={withBasePath("/twindowBox.png")}
-                  alt="Twindow app box art"
+                  alt="twindow app box art"
                   width={1200}
                   height={900}
                   className="h-auto w-full object-cover"
@@ -62,16 +62,16 @@ export function HeroSection() {
               </div>
               <div>
                 <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Now shipping</p>
-                <p className="mt-2 text-sm text-muted">Download today and run Twindow locally on macOS with no account setup.</p>
+                <p className="mt-2 text-sm text-muted">Download today and run twindow locally on macOS with no account setup.</p>
               </div>
               <ul className="space-y-2 text-sm text-muted">
                 <li>• Selective app/window duplication</li>
-                <li>• View-only passive Twindows</li>
+                <li>• View-only passive twindows</li>
                 <li>• Works with extended desktop</li>
               </ul>
               <div className="pt-2">
                 <Button href="#pricing" className="w-full">
-                  Get Twindow
+                  Get twindow
                 </Button>
               </div>
             </div>

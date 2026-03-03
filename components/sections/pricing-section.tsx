@@ -4,15 +4,15 @@ import { SectionHeading } from "@/components/ui/section-heading";
 
 const trial = [
   "Full premium features for 14 days",
-  "Multiple Twindows",
+  "Multiple twindows",
   "Selective window duplication",
   "No account required",
   "All data remains local on your Mac"
 ];
 const standard = [
   "One-time purchase after trial",
-  "Multiple Twindows",
-  "Passive view-only Twindows",
+  "Multiple twindows",
+  "Passive view-only twindows",
   "No account required",
   "All data remains local on your Mac"
 ];
@@ -30,7 +30,7 @@ export function PricingSection() {
         <Reveal className="card-surface p-5 sm:p-7">
           <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Premium Trial</p>
           <p className="mt-3 text-3xl font-bold sm:mt-4 sm:text-4xl">14 Day Free Trial</p>
-          <p className="mt-2 text-sm text-muted">Use the full Twindow workflow free for two weeks before deciding.</p>
+          <p className="mt-2 text-sm text-muted">Use the full twindow workflow free for two weeks before deciding.</p>
           <ul className="mt-6 space-y-2 text-sm text-muted">
             {trial.map((item) => (
               <li key={item}>• {item}</li>
@@ -42,7 +42,7 @@ export function PricingSection() {
         </Reveal>
 
         <Reveal className="card-surface border-accent/45 p-5 sm:p-7" delay={0.08}>
-          <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Keep Twindow</p>
+          <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Keep twindow</p>
           <div className="mt-3 flex flex-wrap items-center gap-3 sm:mt-4">
             <p className="text-xl font-semibold text-muted line-through sm:text-2xl">$29</p>
             <p className="text-3xl font-bold sm:text-4xl">$19.99</p>
@@ -50,14 +50,14 @@ export function PricingSection() {
               Earlybird
             </span>
           </div>
-          <p className="mt-2 text-sm text-muted">One-time license for the full Twindow workflow after your trial ends.</p>
+          <p className="mt-2 text-sm text-muted">One-time license for the full twindow workflow after your trial ends.</p>
           <ul className="mt-6 space-y-2 text-sm text-muted">
             {standard.map((item) => (
               <li key={item}>• {item}</li>
             ))}
           </ul>
           <Button href="#" className="mt-8 w-full">
-            Download Twindow
+            Download twindow
           </Button>
         </Reveal>
       </div>

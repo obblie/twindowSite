@@ -7,12 +7,12 @@ const steps = [
     description: "Choose the exact app window you want to duplicate from a clean picker."
   },
   {
-    title: "Create a Twindow",
+    title: "Create a twindow",
     description: "Generate a passive, view-only duplicate with one click."
   },
   {
     title: "Drag to second display",
-    description: "Move the Twindow to your extended desktop and keep your main desktop private."
+    description: "Move the twindow to your extended desktop and keep your main desktop private."
   }
 ];
 

@@ -38,35 +38,39 @@ export function TopNav() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-surface/75 backdrop-blur-xl">
-      <div className="container-shell flex h-14 items-center justify-between gap-3 md:h-16 md:gap-4">
-        <a href="#hero" className="focus-ring inline-flex items-center gap-2 rounded-lg px-2 py-1">
-          <span className="font-mono text-xs uppercase tracking-[0.18em] text-accent">Twindow</span>
-          <span className="hidden font-mono text-xs uppercase tracking-[0.14em] text-muted sm:inline">
-            Mirror apps, not your life.
-          </span>
-        </a>
-
-        <nav aria-label="Section navigation" className="hidden items-center gap-1 lg:flex">
-          {sections.map((section) => (
-            <a
-              key={section.id}
-              href={`#${section.id}`}
-              className={cn(
-                "focus-ring rounded-lg px-3 py-2 font-mono text-[11px] uppercase tracking-[0.14em] transition",
-                active === section.id ? "bg-card text-foreground" : "text-muted hover:text-foreground"
-              )}
-              aria-current={active === section.id ? "page" : undefined}
-            >
-              {section.label}
+      <div className="mx-auto h-14 w-full max-w-[96rem] px-4 md:h-16 md:px-8">
+        <div className="flex h-full items-center justify-between gap-3 md:gap-4 lg:grid lg:grid-cols-[1.1fr,0.9fr] lg:gap-16">
+          <div className="flex min-w-0 items-center justify-between gap-6 lg:pr-4">
+            <a href="#hero" className="focus-ring inline-flex min-w-0 items-center gap-2 rounded-lg px-2 py-1">
+              <span className="font-mono text-xs uppercase tracking-[0.18em] text-accent">twindow</span>
+              <span className="hidden truncate font-mono text-xs uppercase tracking-[0.14em] text-muted sm:inline">
+                Mirror apps, not your life.
+              </span>
             </a>
-          ))}
-        </nav>
 
-        <div className="flex items-center gap-2">
-          <ThemeToggle />
-          <Button href="#pricing" variant="secondary" className="hidden sm:inline-flex">
-            Download
-          </Button>
+            <nav aria-label="Section navigation" className="hidden items-center gap-1 lg:flex">
+              {sections.map((section) => (
+                <a
+                  key={section.id}
+                  href={`#${section.id}`}
+                  className={cn(
+                    "focus-ring rounded-lg px-3 py-2 font-mono text-[11px] uppercase tracking-[0.14em] transition",
+                    active === section.id ? "bg-card text-foreground" : "text-muted hover:text-foreground"
+                  )}
+                  aria-current={active === section.id ? "page" : undefined}
+                >
+                  {section.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+
+          <div className="flex items-center justify-end gap-2">
+            <ThemeToggle />
+            <Button href="#pricing" variant="secondary" className="hidden sm:inline-flex">
+              Download
+            </Button>
+          </div>
         </div>
       </div>
     </header>

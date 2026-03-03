@@ -13,7 +13,7 @@ export function ProblemSolutionSection() {
       <SectionHeading
         kicker="Problem / Solution"
         title="When you mirror a whole display, you lose control."
-        description="Twindow duplicates only what you choose, so your second monitor stays useful while your private desktop stays private."
+        description="twindow duplicates only what you choose, so your second monitor stays useful while your private desktop stays private."
       />
 
       <div className="mt-10 grid gap-4 md:grid-cols-3">
@@ -27,7 +27,7 @@ export function ProblemSolutionSection() {
 
       <Reveal className="card-surface mt-6 p-7 md:p-9" delay={0.1}>
         <p className="kicker">Solution</p>
-        <p className="mt-4 text-2xl font-semibold md:text-3xl">Twindow duplicates only what you choose.</p>
+        <p className="mt-4 text-2xl font-semibold md:text-3xl">twindow duplicates only what you choose.</p>
       </Reveal>
     </section>
   );

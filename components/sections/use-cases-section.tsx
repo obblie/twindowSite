@@ -14,7 +14,7 @@ const personas = [
   },
   {
     role: "Creative technologist",
-    quote: "I pin multiple Twindows for plugins and control panels on a dedicated monitor.",
+    quote: "I pin multiple twindows for plugins and control panels on a dedicated monitor.",
     scenario: "Multi-app workflow where one display stays clean for clients or collaborators."
   }
 ];

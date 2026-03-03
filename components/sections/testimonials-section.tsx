@@ -4,19 +4,19 @@ import { SectionHeading } from "@/components/ui/section-heading";
 const testimonials = [
   {
     quote:
-      "I teach with slides on one screen and my notes on the other. Twindow lets students see only what I intend to present without exposing the rest of my desktop.",
+      "I teach with slides on one screen and my notes on the other. twindow lets students see only what I intend to present without exposing the rest of my desktop.",
     name: "Elena M.",
     role: "College Lecturer"
   },
   {
     quote:
-      "During client reviews I need one clean view for the room and a separate working setup for myself. Twindow made that split feel deliberate instead of improvised.",
+      "During client reviews I need one clean view for the room and a separate working setup for myself. twindow made that split feel deliberate instead of improvised.",
     name: "Marcus T.",
     role: "Project Manager"
   },
   {
     quote:
-      "I often present dashboards while keeping private models and messages off-screen. Twindow gives me a much cleaner handoff to the external monitor.",
+      "I often present dashboards while keeping private models and messages off-screen. twindow gives me a much cleaner handoff to the external monitor.",
     name: "Priya S.",
     role: "Financial Analyst"
   }

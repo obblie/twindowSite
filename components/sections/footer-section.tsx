@@ -9,7 +9,7 @@ export function FooterSection() {
             <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">The Choice is Yours</p>
             <h2 className="mt-2 text-2xl font-bold">Don't share your desktop with ANYONE. Share twindows instead  🙂</h2>
           </div>
-          <Button href="#pricing">Download Twindow</Button>
+          <Button href="#pricing">Download twindow</Button>
         </div>
 
         <div className="flex flex-col justify-between gap-4 text-sm text-muted md:flex-row md:items-center">
@@ -19,7 +19,7 @@ export function FooterSection() {
           </div>
           <div className="text-left md:text-right">
             <p>Privacy note: Local-only duplication. No account required.</p>
-            <p>© {new Date().getFullYear()} Twindow. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} twindow. All rights reserved.</p>
           </div>
         </div>
       </div>

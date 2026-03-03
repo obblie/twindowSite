@@ -6,11 +6,11 @@ const galleryItems = [
   {
     title: "A) App picker",
     src: "/gallery-1.png",
-    shouldShow: "A clean list of open app windows with one selected to become a Twindow.",
+    shouldShow: "A clean list of open app windows with one selected to become a twindow.",
     why: "Shows selective targeting instead of full-screen mirroring."
   },
   {
-    title: "B) Passive Twindow",
+    title: "B) Passive twindow",
     src: "/gallery-2.png",
     shouldShow: "A separate duplicate window with a subtle border and no interaction cursor cues.",
     why: "Communicates view-only behavior for safer sharing."
@@ -18,7 +18,7 @@ const galleryItems = [
   {
     title: "C) Drag to monitor",
     src: "/gallery-3.png",
-    shouldShow: "User dragging a Twindow onto a second display in extended desktop mode.",
+    shouldShow: "User dragging a twindow onto a second display in extended desktop mode.",
     why: "Demonstrates the core two-screen workflow clearly."
   },
   {

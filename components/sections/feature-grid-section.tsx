@@ -8,7 +8,7 @@ const features = [
   },
   {
     label: "Passive Duplicate Windows",
-    copy: "Twindows are read-only with no input passthrough."
+    copy: "twindows are read-only with no input passthrough."
   },
   {
     label: "Extended desktop native",
@@ -16,7 +16,7 @@ const features = [
   },
   {
     label: "Multi-window support",
-    copy: "Create multiple Twindows to arrange your dashboard layout"
+    copy: "Create multiple twindows to arrange your dashboard layout"
   }
 ];
 

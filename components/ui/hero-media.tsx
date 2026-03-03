@@ -10,7 +10,7 @@ export function HeroMedia() {
         <SectionHeading
           kicker="Demo"
           title="Never share your desktop again"
-          description="Create a Twindow in seconds, and drag it to your second display. Breathe easy 🧘‍♀️ "
+          description="Create a twindow in seconds, and drag it to your second display. Breathe easy 🧘‍♀️ "
           className="px-1 md:px-2"
         />
 
@@ -23,7 +23,7 @@ export function HeroMedia() {
             <LazyVideo
               className="block h-auto w-full bg-transparent"
               poster={withBasePath("/twindowAd.png")}
-              ariaLabel="Twindow product demo video"
+              ariaLabel="twindow product demo video"
               sources={[
                 { src: withBasePath("/TwindowDemo.mp4?v=20260301-2"), type: "video/mp4" }
               ]}
