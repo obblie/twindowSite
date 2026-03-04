@@ -16,7 +16,6 @@ export function FooterSection() {
         <div className="flex flex-col justify-between gap-6 text-sm text-muted md:flex-row md:items-center">
           <div>
             <p>Email: hello@twindow.app</p>
-            <p>Socials: @twindowapp (X, YouTube, GitHub)</p>
           </div>
           <div className="flex flex-col gap-3 text-left md:items-end md:text-right">
             <nav aria-label="Legal" className="flex flex-wrap gap-x-4 gap-y-2">
