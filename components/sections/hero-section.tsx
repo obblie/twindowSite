@@ -26,7 +26,7 @@ export function HeroSection() {
 
             <div className="space-y-6">
               <div className="grid gap-4 sm:flex sm:flex-wrap sm:gap-3">
-                <Button href="#pricing" className="w-full sm:w-auto">
+                <Button href="/upgrade" className="w-full sm:w-auto">
                   Download
                 </Button>
                 <Button href="#hero-demo" variant="secondary" className="w-full sm:w-auto">
@@ -70,7 +70,7 @@ export function HeroSection() {
                 <li>• Works with extended desktop</li>
               </ul>
               <div className="pt-2">
-                <Button href="#pricing" className="w-full">
+                <Button href="/upgrade" className="w-full">
                   Get twindow
                 </Button>
               </div>

@@ -20,7 +20,7 @@ export function LegalPageShell({ eyebrow, title, summary, children }: LegalPageS
             twindow
           </Link>
           <Link
-            href="/#pricing"
+            href="/upgrade"
             className="focus-ring rounded-lg border border-border bg-card/75 px-4 py-2 text-sm font-semibold text-foreground transition hover:bg-card"
           >
             Download

@@ -36,7 +36,7 @@ export function PricingSection() {
               <li key={item}>• {item}</li>
             ))}
           </ul>
-          <Button href="#" variant="secondary" className="mt-8 w-full">
+          <Button href="/upgrade" variant="secondary" className="mt-8 w-full">
             Start trial
           </Button>
         </Reveal>
@@ -56,8 +56,8 @@ export function PricingSection() {
               <li key={item}>• {item}</li>
             ))}
           </ul>
-          <Button href="#" className="mt-8 w-full">
-            Download twindow
+          <Button href="/upgrade" className="mt-8 w-full">
+            Buy now
           </Button>
         </Reveal>
       </div>
