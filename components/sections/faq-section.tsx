@@ -8,7 +8,7 @@ const faqs = [
   },
   {
     q: "Does it record my screen?",
-    a: "No. twindow does not record your screen."
+    a: "No. twindow does not record your screen to a video file, but it does require permission to record your screen in order to stream to the twindow."
   },
   {
     q: "Does it capture keystrokes?",

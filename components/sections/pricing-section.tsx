@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 const trial = [
   "Full premium features for 14 days",
   "Multiple twindows",
-  "Selective window duplication",
+  "After trial, 1 twindow with watermark",
   "No account required",
   "All data remains local on your Mac"
 ];
@@ -44,8 +44,8 @@ export function PricingSection() {
         <Reveal className="card-surface border-accent/45 p-5 sm:p-7" delay={0.08}>
           <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Keep twindow</p>
           <div className="mt-3 flex flex-wrap items-center gap-3 sm:mt-4">
-            <p className="text-xl font-semibold text-muted line-through sm:text-2xl">$29</p>
-            <p className="text-3xl font-bold sm:text-4xl">$19.99</p>
+            <p className="text-xl font-semibold text-muted line-through sm:text-2xl">$14.99</p>
+            <p className="text-3xl font-bold sm:text-4xl">$9.99</p>
             <span className="inline-flex rounded-full border border-yellow-300/70 bg-yellow-300/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-yellow-100 shadow-[0_0_24px_rgba(253,224,71,0.35)]">
               Earlybird
             </span>
