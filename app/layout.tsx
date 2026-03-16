@@ -15,11 +15,11 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "twindow | Mirror apps, not your life.",
+  title: "twindow | Never share your desktop again.",
   description:
     "Create a passive, view-only twindow of any app and move it to your second display without exposing your desktop.",
   openGraph: {
-    title: "twindow | Mirror apps, not your life.",
+    title: "twindow | Never share your desktop again.",
     description:
       "Selective app window duplication for macOS. Private demos and presentations with full control.",
     type: "website",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "twindow | Mirror apps, not your life.",
+    title: "twindow | Never share your desktop again.",
     description:
       "Duplicate only the windows you choose to your second monitor. No full-screen mirroring.",
     images: ["/og.png"]

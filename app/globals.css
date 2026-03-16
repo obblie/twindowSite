@@ -66,6 +66,10 @@ body {
   .focus-ring {
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--ring))] focus-visible:ring-offset-2 focus-visible:ring-offset-surface;
   }
+
+  .hero-description {
+    margin-top: 32px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

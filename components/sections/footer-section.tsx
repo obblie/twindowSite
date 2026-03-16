@@ -26,7 +26,7 @@ export function FooterSection() {
                 Return Policy
               </Link>
             </nav>
-            <p>Privacy note: Local-only duplication. No account required.</p>
+            <p>Privacy note: Designed for privacy. Screen duplication is processed entirely on your device and no screen content is recorded, stored, or transmitted.</p>
             <p>© {new Date().getFullYear()} twindow. All rights reserved.</p>
           </div>
         </div>
