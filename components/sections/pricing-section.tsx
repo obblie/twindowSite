@@ -22,8 +22,8 @@ export function PricingSection() {
     <section id="pricing" className="section-wrap">
       <SectionHeading
         kicker="Pricing"
-        title="One app, two ways to start"
-        description="Start with a two-week premium trial, then keep the full app with a one-time purchase."
+        title="Two ways to start"
+        description="Start with a one-week premium trial, then keep the full app with a one-time purchase."
       />
 
       <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-5 lg:grid-cols-2">
