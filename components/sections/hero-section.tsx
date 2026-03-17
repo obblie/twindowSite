@@ -37,18 +37,18 @@ export function HeroSection() {
 
             <div className="w-full max-w-[38rem] space-y-3">
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-                <Button href="/upgrade" className="w-full">
+                <Button href="/download" className="w-full">
                   Download
                 </Button>
                 <Button href="#hero-demo" variant="secondary" className="w-full">
                   Watch demo
                 </Button>
                 <Button
-                  href="#features"
+                  href="#testimonials"
                   variant="ghost"
                   className="w-full border border-border/70 bg-card/35 text-foreground hover:bg-card/70"
                 >
-                  Explore features
+                  Testimonials
                 </Button>
               </div>
 
@@ -83,7 +83,7 @@ export function HeroSection() {
                 <li>• Works with extended desktop</li>
               </ul>
               <div className="pt-2">
-                <Button href="/upgrade" className="w-full">
+                <Button href="/download" className="w-full">
                   Get twindow
                 </Button>
               </div>

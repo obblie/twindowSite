@@ -30,6 +30,16 @@ export function Button({
   const classes = cn(baseClass, variants[variant], className);
 
   if (href) {
+    // File downloads should use a native navigation request (not SPA routing),
+    // so repeated clicks reliably trigger a new download.
+    if (href === "/download") {
+      return (
+        <a href={href} className={classes}>
+          {children}
+        </a>
+      );
+    }
+
     return (
       <Link href={href} className={classes}>
         {children}

@@ -64,7 +64,7 @@ export function TopNav() {
 
           <div className="flex items-center justify-end gap-2">
             <ThemeToggle />
-            <Button href="/upgrade" variant="secondary" className="hidden sm:inline-flex">
+            <Button href="/download" variant="secondary" className="hidden sm:inline-flex">
               Download
             </Button>
           </div>
