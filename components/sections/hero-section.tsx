@@ -84,7 +84,7 @@ export function HeroSection() {
               </ul>
               <div className="pt-2">
                 <Button href="/download" className="w-full">
-                  Get twindow
+                  Buy twindow - $9.99
                 </Button>
               </div>
             </div>

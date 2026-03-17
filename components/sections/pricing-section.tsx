@@ -36,7 +36,7 @@ export function PricingSection() {
               <li key={item}>• {item}</li>
             ))}
           </ul>
-          <Button href="/upgrade" variant="secondary" className="mt-8 w-full">
+          <Button href="/download" variant="secondary" className="mt-8 w-full">
             Start trial
           </Button>
         </Reveal>
@@ -56,7 +56,10 @@ export function PricingSection() {
               <li key={item}>• {item}</li>
             ))}
           </ul>
-          <Button href="/upgrade" className="mt-8 w-full">
+          <Button
+            href="https://twindow.lemonsqueezy.com/checkout/buy/64afebe8-47cf-4952-89e8-3261393a0c7a"
+            className="mt-8 w-full"
+          >
             Buy now
           </Button>
         </Reveal>
