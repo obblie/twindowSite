@@ -54,7 +54,7 @@ export function HeroSection() {
 
               <div className="card-surface inline-flex w-full max-w-full flex-wrap items-start gap-3 px-4 py-3 text-sm sm:flex-nowrap sm:px-5 sm:py-4 md:px-6 md:text-base">
                 <span className="font-mono text-[10px] uppercase tracking-[0.45em] text-accent">Privacy Note</span>
-                <p className="text-muted">Screen duplication occurs only on your device."</p>
+                <p className="text-muted">Screen duplication occurs only on your device.</p>
               </div>
             </div>
           </Reveal>
