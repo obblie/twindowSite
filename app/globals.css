@@ -68,7 +68,13 @@ body {
   }
 
   .hero-description {
-    margin-top: 32px;
+    margin-top: 20px;
+  }
+
+  @media (min-width: 640px) {
+    .hero-description {
+      margin-top: 32px;
+    }
   }
 }
 
