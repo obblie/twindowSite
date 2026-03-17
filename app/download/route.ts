@@ -8,11 +8,14 @@ export async function GET() {
   try {
     const upstream = await fetch(DMG_URL, {
       cache: "no-store",
-      redirect: "follow"
+      redirect: "follow",
+      headers: {
+        "user-agent": "twindow-download-proxy/1.0"
+      }
     });
 
     if (!upstream.ok || !upstream.body) {
-      return new Response("Download temporarily unavailable.", { status: 502 });
+      return Response.redirect(DMG_URL, 302);
     }
 
     const contentType = upstream.headers.get("content-type") ?? "application/x-apple-diskimage";
@@ -28,6 +31,6 @@ export async function GET() {
       }
     });
   } catch {
-    return new Response("Download temporarily unavailable.", { status: 502 });
+    return Response.redirect(DMG_URL, 302);
   }
 }
