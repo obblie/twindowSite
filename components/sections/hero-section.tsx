@@ -16,7 +16,7 @@ export function HeroSection() {
         <div className="grid w-full items-end gap-8 sm:gap-10 md:gap-12 lg:grid-cols-[1.2fr,0.8fr] lg:gap-12">
           <Reveal className="flex flex-col gap-7 sm:gap-8 md:gap-10">
             <div className="max-w-[56rem]">
-              <h1 className="w-full font-extrabold leading-[0.92] tracking-tight">
+              <h1 className="w-full text-center font-extrabold leading-[0.92] tracking-tight sm:text-left">
                 <span className="block text-[clamp(3.2rem,17vw,5.4rem)] text-foreground md:text-[clamp(5rem,15.5vw,12rem)]">
                   twindow
                 </span>
@@ -54,7 +54,7 @@ export function HeroSection() {
 
               <div className="card-surface inline-flex w-full max-w-full flex-wrap items-start gap-3 px-4 py-3 text-sm sm:flex-nowrap sm:px-5 sm:py-4 md:px-6 md:text-base">
                 <span className="font-mono text-[10px] uppercase tracking-[0.45em] text-accent">Privacy Note</span>
-                <p className="text-muted">Screen duplication happens entirely on your device.</p>
+                <p className="text-muted">Screen duplication occurs only on your device."</p>
               </div>
             </div>
           </Reveal>
