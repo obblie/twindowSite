@@ -32,24 +32,24 @@ export function HeroSection() {
               </p>
             </div>
 
-            <div className="space-y-5">
-              <div className="grid gap-3 sm:flex sm:flex-wrap">
-                <Button href="/upgrade" className="w-full sm:w-auto sm:min-w-[10.5rem]">
+            <div className="w-full max-w-[38rem] space-y-3">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+                <Button href="/upgrade" className="w-full">
                   Download
                 </Button>
-                <Button href="#hero-demo" variant="secondary" className="w-full sm:w-auto sm:min-w-[10.5rem]">
+                <Button href="#hero-demo" variant="secondary" className="w-full">
                   Watch demo
                 </Button>
                 <Button
                   href="#features"
                   variant="ghost"
-                  className="w-full border border-border/70 bg-card/35 text-foreground hover:bg-card/70 sm:w-auto sm:min-w-[13rem]"
+                  className="w-full border border-border/70 bg-card/35 text-foreground hover:bg-card/70"
                 >
                   Explore features
                 </Button>
               </div>
 
-              <div className="card-surface inline-flex w-fit max-w-full flex-wrap items-start gap-3 self-start px-4 py-3 text-sm sm:flex-nowrap sm:px-5 sm:py-4 md:px-6 md:text-base">
+              <div className="card-surface inline-flex w-full max-w-full flex-wrap items-start gap-3 px-4 py-3 text-sm sm:flex-nowrap sm:px-5 sm:py-4 md:px-6 md:text-base">
                 <span className="font-mono text-[10px] uppercase tracking-[0.45em] text-accent">Privacy Note</span>
                 <p className="text-muted">Screen duplication happens entirely on your device.</p>
               </div>
