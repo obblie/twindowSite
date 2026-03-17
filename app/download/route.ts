@@ -1,6 +1,9 @@
 const DMG_URL = "https://github.com/obblie/twindowSite/releases/download/v0.2.43/twindow.dmg";
 const DOWNLOAD_FILENAME = "twindow.dmg";
 
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
+
 export async function GET() {
   try {
     const upstream = await fetch(DMG_URL, {
