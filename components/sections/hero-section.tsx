@@ -83,7 +83,10 @@ export function HeroSection() {
                 <li>• Works with extended desktop</li>
               </ul>
               <div className="pt-2">
-                <Button href="/download" className="w-full">
+                <Button
+                  href="https://twindow.lemonsqueezy.com/checkout/buy/64afebe8-47cf-4952-89e8-3261393a0c7a"
+                  className="w-full"
+                >
                   Buy twindow - $9.99
                 </Button>
               </div>
