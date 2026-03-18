@@ -26,6 +26,9 @@ export function FooterSection() {
           </div>
           <div className="flex flex-col gap-3 text-left md:items-end md:text-right">
             <nav aria-label="Legal" className="flex flex-wrap gap-x-4 gap-y-2">
+              <Link href="/privacy-policy" className="focus-ring rounded text-muted/85 transition hover:text-foreground">
+                Privacy Policy
+              </Link>
               <Link href="/terms" className="focus-ring rounded text-muted/85 transition hover:text-foreground">
                 Terms of Service
               </Link>
