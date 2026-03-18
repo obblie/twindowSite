@@ -35,25 +35,25 @@ export function HeroSection() {
               </p>
             </div>
 
-            <div className="w-full max-w-[38rem] space-y-3">
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-                <Button href="/download" className="w-full">
+            <div className="mt-12 w-full max-w-[50rem] space-y-3 sm:mt-14">
+              <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3">
+                <Button href="/download" className="h-[3.75rem] w-full text-[1.12rem] font-semibold shadow-soft md:h-16">
                   Download
                 </Button>
-                <Button href="#hero-demo" variant="secondary" className="w-full">
+                <Button href="#hero-demo" variant="secondary" className="h-[3.75rem] w-full text-[1.12rem] font-semibold md:h-16">
                   Watch demo
                 </Button>
                 <Button
                   href="#testimonials"
                   variant="ghost"
-                  className="w-full border border-border/70 bg-card/35 text-foreground hover:bg-card/70"
+                  className="h-[3.75rem] w-full border border-border/80 bg-card/35 text-[1.12rem] font-semibold text-foreground hover:bg-card/65 md:h-16"
                 >
                   Testimonials
                 </Button>
               </div>
 
-              <div className="card-surface inline-flex w-full max-w-full flex-wrap items-start gap-3 px-4 py-3 text-sm sm:flex-nowrap sm:px-5 sm:py-4 md:px-6 md:text-base">
-                <span className="font-mono text-[10px] uppercase tracking-[0.45em] text-accent">Privacy Note</span>
+              <div className="inline-flex w-full flex-wrap items-center gap-3 rounded-2xl border border-border/70 bg-card/35 px-5 py-5 text-[1.02rem] sm:flex-nowrap md:px-6 md:text-[1.06rem]">
+                <span className="font-mono text-[14px] uppercase tracking-[0.24em] text-accent">Privacy Note</span>
                 <p className="text-muted">Screen duplication occurs only on your device.</p>
               </div>
             </div>
@@ -85,7 +85,7 @@ export function HeroSection() {
               <div className="pt-2">
                 <Button
                   href="https://twindow.lemonsqueezy.com/checkout/buy/64afebe8-47cf-4952-89e8-3261393a0c7a"
-                  className="w-full"
+                  className="w-full py-3.5 text-[1.04rem] font-semibold md:text-[1.1rem]"
                 >
                   Buy twindow - $9.99
                 </Button>

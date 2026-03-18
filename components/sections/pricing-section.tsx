@@ -42,7 +42,7 @@ export function PricingSection() {
         </Reveal>
 
         <Reveal className="card-surface border-accent/45 p-5 sm:p-7" delay={0.08}>
-          <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Keep twindow</p>
+          <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Lifetime License</p>
           <div className="mt-3 flex flex-wrap items-center gap-3 sm:mt-4">
             <p className="text-xl font-semibold text-muted line-through sm:text-2xl">$14.99</p>
             <p className="text-3xl font-bold sm:text-4xl">$9.99</p>
@@ -65,7 +65,7 @@ export function PricingSection() {
         </Reveal>
       </div>
 
-      <p className="mt-5 text-xs text-muted">Pricing subject to change. Early supporters get lifetime discount.</p>
+      <p className="mt-5 text-xl text-muted">*Pricing subject to change. Early supporters get lifetime discount.</p>
     </section>
   );
 }
