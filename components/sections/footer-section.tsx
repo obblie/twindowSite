@@ -3,30 +3,37 @@ import { Button } from "@/components/ui/button";
 
 export function FooterSection() {
   return (
-    <footer className="border-t border-border/70 pb-12 pt-10">
-      <div className="container-shell space-y-8">
-        <div className="card-surface flex flex-col items-start justify-between gap-5 p-6 md:flex-row md:items-center">
-          <div>
-            <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">The Choice is Yours</p>
-            <h2 className="mt-2 text-2xl font-bold">Don't share your desktop with ANYONE. Share twindows instead  🙂</h2>
+    <footer className="border-t border-border/70 pb-12 pt-12">
+      <div className="container-shell space-y-10">
+        <div className="flex flex-col items-start justify-between gap-6 border-b border-border/50 pb-8 md:flex-row md:items-end">
+          <div className="max-w-3xl">
+            <p className="font-mono text-[18px] uppercase tracking-[0.16em] text-accent/90">The choice is yours</p>
+            <h2 className="mt-2 text-2xl font-extrabold tracking-tight md:text-3xl">
+              Don&apos;t share your desktop. Share twindows instead.
+            </h2>
+            <p className="mt-3 text-sm text-muted md:text-base">
+              Keep your real workspace private while presenting only what people need to see.
+            </p>
           </div>
-          <Button href="/download">Download twindow</Button>
+          <Button href="/download" variant="secondary" className="px-4 py-2.5 text-[13px] md:px-5">
+            Download twindow
+          </Button>
         </div>
 
-        <div className="flex flex-col justify-between gap-6 text-sm text-muted md:flex-row md:items-center">
-          <div>
+        <div className="flex flex-col justify-between gap-6 pt-1 text-sm text-muted/85 md:flex-row md:items-center">
+          <div className="text-muted/85">
             <p>Email: hello@twindow.app</p>
           </div>
           <div className="flex flex-col gap-3 text-left md:items-end md:text-right">
             <nav aria-label="Legal" className="flex flex-wrap gap-x-4 gap-y-2">
-              <Link href="/terms" className="focus-ring rounded text-muted transition hover:text-foreground">
+              <Link href="/terms" className="focus-ring rounded text-muted/85 transition hover:text-foreground">
                 Terms of Service
               </Link>
-              <Link href="/return-policy" className="focus-ring rounded text-muted transition hover:text-foreground">
+              <Link href="/return-policy" className="focus-ring rounded text-muted/85 transition hover:text-foreground">
                 Return Policy
               </Link>
             </nav>
-            <p>© {new Date().getFullYear()} twindow. All rights reserved.</p>
+            <p className="text-muted/75">© {new Date().getFullYear()} twindow. All rights reserved.</p>
           </div>
         </div>
       </div>

@@ -42,7 +42,7 @@ export function TopNav() {
         <div className="flex h-full items-center justify-between gap-3 md:gap-4 lg:grid lg:grid-cols-[1.1fr,0.9fr] lg:gap-16">
           <div className="flex min-w-0 items-center justify-between gap-6 lg:pr-4">
             <a href="#hero" className="focus-ring inline-flex min-w-0 items-center gap-2 rounded-lg px-2 py-1">
-              <span className="font-mono text-xs uppercase tracking-[0.18em] text-accent">twindow</span>
+              <span className="font-mono text-xs lowercase tracking-[0.18em] text-accent">twindow</span>
             </a>
 
             <nav aria-label="Section navigation" className="hidden items-center gap-1 lg:flex">
