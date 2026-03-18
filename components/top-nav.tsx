@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { FontSelector } from "@/components/ui/font-selector";
 import { Button } from "@/components/ui/button";
 import { sections } from "@/lib/sections";
 import { cn } from "@/lib/utils";
@@ -87,6 +88,9 @@ export function TopNav() {
           </nav>
 
           <div className="flex items-center justify-end gap-2 lg:justify-self-end">
+            <div className="hidden sm:inline-flex">
+              <FontSelector />
+            </div>
             <ThemeToggle className="h-9 rounded-md border-border/55 bg-card/25 px-3.5 py-1.5 text-[12px] font-medium tracking-[0.12em] text-foreground/90 hover:bg-card/45" />
             <Button
               href="/download"

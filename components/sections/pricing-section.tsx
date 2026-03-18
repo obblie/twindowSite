@@ -35,7 +35,7 @@ export function PricingSection() {
       />
 
       <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-5 lg:grid-cols-3">
-        <Reveal className="card-surface p-5 sm:p-7">
+        <Reveal className="card-surface flex h-full flex-col p-5 sm:p-7">
           <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Premium Trial</p>
           <p className="mt-3 text-3xl font-bold sm:mt-4 sm:text-4xl">7 Day Free Trial</p>
           <p className="mt-2 text-sm text-muted">Full access for 7 days. No commitment.</p>
@@ -44,12 +44,12 @@ export function PricingSection() {
               <li key={item}>• {item}</li>
             ))}
           </ul>
-          <Button href="/download" variant="secondary" className="mt-8 w-full">
+          <Button href="/download" variant="secondary" className="mt-auto w-full pt-8">
             Start free trial
           </Button>
         </Reveal>
 
-        <Reveal className="card-surface border-accent/55 p-5 sm:p-7" delay={0.08}>
+        <Reveal className="card-surface border-accent/55 flex h-full flex-col p-5 sm:p-7" delay={0.08}>
           <div className="flex items-center justify-between gap-3">
             <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Individual</p>
             <span className="inline-flex rounded-full border border-accent/45 bg-accent/15 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-accent">
@@ -69,16 +69,16 @@ export function PricingSection() {
               <li key={item}>• {item}</li>
             ))}
           </ul>
+          <p className="mt-3 text-xs text-muted">Private by design. No data leaves your Mac.</p>
           <Button
             href="https://twindow.lemonsqueezy.com/checkout/buy/64afebe8-47cf-4952-89e8-3261393a0c7a"
-            className="mt-8 w-full"
+            className="mt-auto w-full pt-8"
           >
             Get lifetime access
           </Button>
-          <p className="mt-3 text-xs text-muted">Private by design. No data leaves your Mac.</p>
         </Reveal>
 
-        <Reveal className="card-surface p-5 sm:p-7" delay={0.12}>
+        <Reveal className="card-surface flex h-full flex-col p-5 sm:p-7" delay={0.12}>
           <div className="flex items-center justify-between gap-3">
             <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Organization</p>
             <span className="inline-flex rounded-full border border-border/70 bg-card/65 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-foreground/85">
@@ -94,7 +94,11 @@ export function PricingSection() {
               <li key={item}>• {item}</li>
             ))}
           </ul>
-          <Button href="mailto:hello@twindow.app?subject=Organization%20Pricing%20Inquiry" variant="secondary" className="mt-8 w-full">
+          <Button
+            href="mailto:hello@twindow.app?subject=Organization%20Pricing%20Inquiry"
+            variant="secondary"
+            className="mt-auto w-full pt-8"
+          >
             Contact sales
           </Button>
         </Reveal>
