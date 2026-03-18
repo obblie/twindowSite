@@ -59,18 +59,25 @@ export function TopNav() {
           >
             <span
               aria-hidden
-              className="pointer-events-none absolute inset-y-0 left-0 w-1/3 rounded-md bg-card/60 transition-transform duration-300"
+              className="pointer-events-none absolute inset-y-0 left-0 w-1/3 rounded-md bg-accent shadow-[0_0_0_1px_hsl(var(--accent)/0.45),0_8px_24px_-16px_hsl(var(--accent)/0.8)] transition-transform duration-300"
               style={{ transform: `translateX(${indicatorIndex * 100}%)` }}
             />
             {sections.map((section, index) => (
               <a
                 key={section.id}
                 href={`#${section.id}`}
+                onClick={() => {
+                  setActive(section.id);
+                  setHoveredIndex(null);
+                }}
                 onMouseEnter={() => setHoveredIndex(index)}
-                onFocus={() => setHoveredIndex(index)}
                 className={cn(
                   "focus-ring relative z-10 rounded-md px-3 py-1.5 text-center font-mono text-[11px] uppercase tracking-[0.14em] transition",
-                  active === section.id ? "text-foreground" : "text-muted/90 hover:text-foreground"
+                  index === indicatorIndex
+                    ? "text-accent-foreground"
+                    : active === section.id
+                      ? "text-foreground"
+                      : "text-muted/90 hover:text-foreground"
                 )}
                 aria-current={active === section.id ? "page" : undefined}
               >

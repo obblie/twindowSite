@@ -9,12 +9,21 @@ const trial = [
   "No account required",
   "All data remains local on your Mac"
 ];
-const standard = [
+const individual = [
   "One-time purchase after trial",
   "Multiple twindows",
   "Passive view-only twindows",
+  "No watermark in purchased mode",
   "No account required",
   "All data remains local on your Mac"
+];
+const organization = [
+  "Bulk license pricing",
+  "Everything in Individual",
+  "Centralized purchasing for teams",
+  "Priority email support",
+  "Invoice-based billing available",
+  "Deployment guidance on request"
 ];
 
 export function PricingSection() {
@@ -22,15 +31,15 @@ export function PricingSection() {
     <section id="pricing" className="section-wrap">
       <SectionHeading
         kicker="Pricing"
-        title="Two ways to start"
-        description="Start with a one-week premium trial, then keep the full app with a one-time purchase."
+        title="Three ways to adopt twindow"
+        description="Start with a one-week trial, buy a lifetime individual license, or contact us for organization pricing."
       />
 
-      <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-5 lg:grid-cols-2">
+      <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-5 lg:grid-cols-3">
         <Reveal className="card-surface p-5 sm:p-7">
           <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Premium Trial</p>
           <p className="mt-3 text-3xl font-bold sm:mt-4 sm:text-4xl">7 Day Free Trial</p>
-          <p className="mt-2 text-sm text-muted">Use the full twindow workflow free for two weeks before deciding.</p>
+          <p className="mt-2 text-sm text-muted">Use the full twindow workflow free for one week before deciding.</p>
           <ul className="mt-6 space-y-2 text-sm text-muted">
             {trial.map((item) => (
               <li key={item}>• {item}</li>
@@ -41,8 +50,13 @@ export function PricingSection() {
           </Button>
         </Reveal>
 
-        <Reveal className="card-surface border-accent/45 p-5 sm:p-7" delay={0.08}>
-          <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Lifetime License</p>
+        <Reveal className="card-surface border-accent/55 p-5 sm:p-7" delay={0.08}>
+          <div className="flex items-center justify-between gap-3">
+            <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Individual</p>
+            <span className="inline-flex rounded-full border border-accent/45 bg-accent/15 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-accent">
+              Most Popular
+            </span>
+          </div>
           <div className="mt-3 flex flex-wrap items-center gap-3 sm:mt-4">
             <p className="text-xl font-semibold text-muted line-through sm:text-2xl">$14.99</p>
             <p className="text-3xl font-bold sm:text-4xl">$9.99</p>
@@ -52,7 +66,7 @@ export function PricingSection() {
           </div>
           <p className="mt-2 text-sm text-muted">One-time license for the full twindow workflow after your trial ends.</p>
           <ul className="mt-6 space-y-2 text-sm text-muted">
-            {standard.map((item) => (
+            {individual.map((item) => (
               <li key={item}>• {item}</li>
             ))}
           </ul>
@@ -61,6 +75,27 @@ export function PricingSection() {
             className="mt-8 w-full"
           >
             Buy now
+          </Button>
+        </Reveal>
+
+        <Reveal className="card-surface p-5 sm:p-7" delay={0.12}>
+          <div className="flex items-center justify-between gap-3">
+            <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Organization</p>
+            <span className="inline-flex rounded-full border border-border/70 bg-card/65 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-foreground/85">
+              Teams
+            </span>
+          </div>
+          <div className="mt-3 flex flex-wrap items-center gap-3 sm:mt-4">
+            <p className="text-3xl font-bold sm:text-4xl">Contact</p>
+          </div>
+          <p className="mt-2 text-sm text-muted">Custom pricing for schools, departments, and organizations buying in volume.</p>
+          <ul className="mt-6 space-y-2 text-sm text-muted">
+            {organization.map((item) => (
+              <li key={item}>• {item}</li>
+            ))}
+          </ul>
+          <Button href="mailto:hello@twindow.app?subject=Organization%20Pricing%20Inquiry" variant="secondary" className="mt-8 w-full">
+            Contact sales
           </Button>
         </Reveal>
       </div>
