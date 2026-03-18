@@ -3,17 +3,16 @@ import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 
 const trial = [
-  "Full premium features for 7 days",
-  "Multiple twindows",
-  "After trial, 1 twindow with watermark",
-  "No account required",
+  "Full access for 7 days",
+  "No commitment, no account required",
+  "After trial: 1 twindow with watermark",
   "All data remains local on your Mac"
 ];
 const individual = [
-  "One-time purchase after trial",
-  "Multiple twindows",
+  "Lifetime license — no subscription",
+  "Unlimited twindow use",
+  "No watermark",
   "Passive view-only twindows",
-  "No watermark in purchased mode",
   "No account required",
   "All data remains local on your Mac"
 ];
@@ -31,22 +30,22 @@ export function PricingSection() {
     <section id="pricing" className="section-wrap">
       <SectionHeading
         kicker="Pricing"
-        title="Three ways to adopt twindow"
-        description="Start with a one-week trial, buy a lifetime individual license, or contact us for organization pricing."
+        title="Simple pricing. No subscriptions."
+        description="Start free, upgrade when you are ready, or contact us for organization pricing."
       />
 
       <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-5 lg:grid-cols-3">
         <Reveal className="card-surface p-5 sm:p-7">
           <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Premium Trial</p>
           <p className="mt-3 text-3xl font-bold sm:mt-4 sm:text-4xl">7 Day Free Trial</p>
-          <p className="mt-2 text-sm text-muted">Use the full twindow workflow free for one week before deciding.</p>
+          <p className="mt-2 text-sm text-muted">Full access for 7 days. No commitment.</p>
           <ul className="mt-6 space-y-2 text-sm text-muted">
             {trial.map((item) => (
               <li key={item}>• {item}</li>
             ))}
           </ul>
           <Button href="/download" variant="secondary" className="mt-8 w-full">
-            Start trial
+            Start free trial
           </Button>
         </Reveal>
 
@@ -64,7 +63,7 @@ export function PricingSection() {
               Earlybird
             </span>
           </div>
-          <p className="mt-2 text-sm text-muted">One-time license for the full twindow workflow after your trial ends.</p>
+          <p className="mt-2 text-sm text-muted">Pay once. Use forever.</p>
           <ul className="mt-6 space-y-2 text-sm text-muted">
             {individual.map((item) => (
               <li key={item}>• {item}</li>
@@ -74,8 +73,9 @@ export function PricingSection() {
             href="https://twindow.lemonsqueezy.com/checkout/buy/64afebe8-47cf-4952-89e8-3261393a0c7a"
             className="mt-8 w-full"
           >
-            Buy now
+            Get lifetime access
           </Button>
+          <p className="mt-3 text-xs text-muted">Private by design. No data leaves your Mac.</p>
         </Reveal>
 
         <Reveal className="card-surface p-5 sm:p-7" delay={0.12}>
