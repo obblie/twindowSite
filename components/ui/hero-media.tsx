@@ -10,7 +10,7 @@ export function HeroMedia() {
         <SectionHeading
           kicker="Demo"
           title="Never share your desktop again"
-          description="Create a twindow in seconds, and drag it to your second display. "
+          description="Create a twindow in seconds, and drag it to a second display. "
           className="px-1 md:px-2"
         />
 

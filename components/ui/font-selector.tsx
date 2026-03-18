@@ -78,7 +78,7 @@ function applyFont(value: FontOption) {
 }
 
 export function FontSelector() {
-  const [font, setFont] = useState<FontOption>("inter-ibm");
+  const [font, setFont] = useState<FontOption>("manrope-jetbrains");
 
   useEffect(() => {
     const saved = localStorage.getItem("twindow-font");
@@ -88,7 +88,7 @@ export function FontSelector() {
       applyFont(valid);
       return;
     }
-    applyFont("inter-ibm");
+    applyFont("manrope-jetbrains");
   }, []);
 
   return (

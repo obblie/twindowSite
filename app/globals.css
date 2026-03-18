@@ -13,8 +13,8 @@
   --accent-foreground: 218 34% 10%;
   --shadow: 215 60% 2%;
   --ring: 187 92% 55%;
-  --font-sans: var(--font-sans-inter);
-  --font-mono: var(--font-mono-ibm-plex);
+  --font-sans: var(--font-sans-manrope);
+  --font-mono: var(--font-mono-jetbrains);
 }
 
 :root.light {

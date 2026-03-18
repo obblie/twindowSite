@@ -1,47 +1,93 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { FontSelector } from "@/components/ui/font-selector";
 import { Button } from "@/components/ui/button";
-import { sections } from "@/lib/sections";
 import { cn } from "@/lib/utils";
 
-export function TopNav() {
-  const [active, setActive] = useState<string>(sections[0].id);
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+const navItems = [
+  { id: "hero", label: "Overview" },
+  { id: "hero-demo", label: "Demo" },
+  { id: "pricing", label: "Pricing" },
+  { id: "testimonials", label: "Testimonials" },
+  { id: "faq", label: "FAQ" }
+] as const;
 
-  const sectionIds = useMemo(() => sections.map((section) => section.id), []);
+export function TopNav() {
+  const [active, setActive] = useState<string>(navItems[0].id);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [indicatorStyle, setIndicatorStyle] = useState<{ left: number; width: number }>({ left: 0, width: 0 });
+  const navRef = useRef<HTMLElement | null>(null);
+  const itemRefs = useRef<Array<HTMLAnchorElement | null>>([]);
+
+  const sectionIds = useMemo(() => navItems.map((item) => item.id), []);
   const activeIndex = Math.max(
     0,
-    sections.findIndex((section) => section.id === active)
+    navItems.findIndex((item) => item.id === active)
   );
   const indicatorIndex = hoveredIndex ?? activeIndex;
 
   useEffect(() => {
-    const observers = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+    const updateActiveFromScroll = () => {
+      const marker = window.innerHeight * 0.44;
+      let nextActive = sectionIds[0];
 
-        if (visible[0]?.target?.id) {
-          setActive(visible[0].target.id);
+      for (const id of sectionIds) {
+        const section = document.getElementById(id);
+        if (!section) continue;
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= marker) {
+          nextActive = id;
+        } else {
+          break;
         }
-      },
-      {
-        rootMargin: "-28% 0px -62% 0px",
-        threshold: [0.2, 0.5, 0.8]
       }
-    );
 
-    sectionIds.forEach((id) => {
-      const section = document.getElementById(id);
-      if (section) observers.observe(section);
-    });
+      setActive((current) => (current === nextActive ? current : nextActive));
+    };
 
-    return () => observers.disconnect();
-  }, [sectionIds]);
+    let rafId = 0;
+    const onScroll = () => {
+      if (hoveredIndex !== null) setHoveredIndex(null);
+      if (rafId) return;
+      rafId = window.requestAnimationFrame(() => {
+        updateActiveFromScroll();
+        rafId = 0;
+      });
+    };
+
+    updateActiveFromScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+
+    return () => {
+      if (rafId) window.cancelAnimationFrame(rafId);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, [hoveredIndex, sectionIds]);
+
+  useEffect(() => {
+    const updateIndicator = () => {
+      const target = itemRefs.current[indicatorIndex];
+      const nav = navRef.current;
+      if (!target || !nav) return;
+      const navBox = nav.getBoundingClientRect();
+      const targetBox = target.getBoundingClientRect();
+      setIndicatorStyle({
+        left: targetBox.left - navBox.left,
+        width: targetBox.width
+      });
+    };
+
+    const raf = requestAnimationFrame(updateIndicator);
+    window.addEventListener("resize", updateIndicator);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("resize", updateIndicator);
+    };
+  }, [indicatorIndex]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/45 bg-surface/36 backdrop-blur-md">
@@ -55,40 +101,44 @@ export function TopNav() {
 
           <nav
             aria-label="Section navigation"
-            className="relative hidden justify-self-center lg:grid lg:w-[21.75rem] lg:grid-cols-3 lg:-translate-x-3"
+            className="relative hidden justify-self-center lg:flex lg:items-center lg:gap-1 lg:-translate-x-3"
             onMouseLeave={() => setHoveredIndex(null)}
+            ref={navRef}
           >
             <span
               aria-hidden
-              className="pointer-events-none absolute inset-y-0 left-0 w-1/3 rounded-md bg-accent shadow-[0_0_0_1px_hsl(var(--accent)/0.45),0_8px_24px_-16px_hsl(var(--accent)/0.8)] transition-transform duration-300"
-              style={{ transform: `translateX(${indicatorIndex * 100}%)` }}
+              className="pointer-events-none absolute inset-y-0 left-0 rounded-md bg-accent shadow-[0_0_0_1px_hsl(var(--accent)/0.45),0_8px_24px_-16px_hsl(var(--accent)/0.8)] transition-all duration-300"
+              style={{ left: indicatorStyle.left, width: indicatorStyle.width }}
             />
-            {sections.map((section, index) => (
+            {navItems.map((item, index) => (
               <a
-                key={section.id}
-                href={`#${section.id}`}
+                key={item.id}
+                href={`#${item.id}`}
+                ref={(el) => {
+                  itemRefs.current[index] = el;
+                }}
                 onClick={() => {
-                  setActive(section.id);
+                  setActive(item.id);
                   setHoveredIndex(null);
                 }}
                 onMouseEnter={() => setHoveredIndex(index)}
                 className={cn(
-                  "focus-ring relative z-10 rounded-md px-3 py-1.5 text-center font-mono text-[11px] uppercase tracking-[0.14em] transition",
+                  "focus-ring relative z-10 rounded-md px-4 py-1.5 text-center font-mono text-[11px] uppercase tracking-[0.14em] whitespace-nowrap transition",
                   index === indicatorIndex
                     ? "text-accent-foreground"
-                    : active === section.id
+                    : active === item.id
                       ? "text-foreground"
                       : "text-muted/90 hover:text-foreground"
                 )}
-                aria-current={active === section.id ? "page" : undefined}
+                aria-current={active === item.id ? "page" : undefined}
               >
-                {section.label}
+                {item.label}
               </a>
             ))}
           </nav>
 
           <div className="flex items-center justify-end gap-2 lg:justify-self-end">
-            <div className="hidden sm:inline-flex">
+            <div className="hidden">
               <FontSelector />
             </div>
             <ThemeToggle className="h-9 rounded-md border-border/55 bg-card/25 px-3.5 py-1.5 text-[12px] font-medium tracking-[0.12em] text-foreground/90 hover:bg-card/45" />
