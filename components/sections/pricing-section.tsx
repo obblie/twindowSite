@@ -52,9 +52,6 @@ export function PricingSection() {
         <Reveal className="card-surface border-accent/55 flex h-full flex-col p-5 sm:p-7" delay={0.08}>
           <div className="flex items-center justify-between gap-3">
             <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Individual</p>
-            <span className="inline-flex rounded-full border border-accent/45 bg-accent/15 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-accent">
-              Most Popular
-            </span>
           </div>
           <div className="mt-3 flex flex-wrap items-center gap-3 sm:mt-4">
             <p className="text-xl font-semibold text-muted line-through sm:text-2xl">$14.99</p>

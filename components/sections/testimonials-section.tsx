@@ -1,24 +1,28 @@
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 
-const testimonials = [
+const useCases = [
   {
-    quote:
-      "I teach with slides on one screen and my notes on the other. twindow lets students see only what I intend to present without exposing the rest of my desktop.",
-    name: "Elena M.",
-    role: "College Lecturer"
+    title: "Teaching and Training",
+    description:
+      "Keep lesson plan materials, class notes, and teaching controls on your desktop while students only see the teaching content in twindow.",
+    guidanceLabel: "Classroom setup",
+    guidance:
+      "Present the lesson window to the room and keep rubrics, notes, and pacing tools visible only to you."
   },
   {
-    quote:
-      "During client reviews I need one clean view for the room and a separate working setup for myself. twindow made that split feel deliberate instead of improvised.",
-    name: "Marcus T.",
-    role: "Project Manager"
+    title: "Client Reviews",
+    description:
+      "Walk through deliverables on an external display without exposing drafts, internal docs, or chat threads.",
+    guidanceLabel: "Review flow",
+    guidance: "Mirror only approved review windows so client sessions stay focused and low-risk."
   },
   {
-    quote:
-      "I often present dashboards while keeping private models and messages off-screen. twindow gives me a much cleaner handoff to the external monitor.",
-    name: "Priya S.",
-    role: "Financial Analyst"
+    title: "Live Demos and Ops",
+    description:
+      "Share dashboards or product screens in real time while keeping controls, credentials, and side tools private.",
+    guidanceLabel: "Ops workflow",
+    guidance: "Use a read-only twindow for the audience while you manage controls and credentials locally."
   }
 ];
 
@@ -26,18 +30,19 @@ export function TestimonialsSection() {
   return (
     <section id="testimonials" className="section-wrap pt-4 md:pt-8">
       <SectionHeading
-        kicker="Testimonials"
-        title="Built for people who present live"
-        description="A few of the workflows where a clean second-screen view matters most."
+        kicker="Use Cases"
+        title="Ways teams use twindow in real workflows"
+        description="Practical scenarios where selective window sharing keeps presentations clear and private."
       />
 
       <div className="mt-8 grid gap-4 sm:mt-10 lg:grid-cols-3">
-        {testimonials.map((testimonial, index) => (
-          <Reveal key={testimonial.name} delay={index * 0.04} className="card-surface h-full p-6">
-            <p className="text-sm leading-7 text-foreground/90">{testimonial.quote}</p>
+        {useCases.map((useCase, index) => (
+          <Reveal key={useCase.title} delay={index * 0.04} className="card-surface h-full p-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">{useCase.title}</p>
+            <p className="mt-3 text-sm leading-7 text-foreground/90">{useCase.description}</p>
             <div className="mt-6 border-t border-border/60 pt-4">
-              <p className="text-sm font-semibold">{testimonial.name}</p>
-              <p className="mt-1 text-xs uppercase tracking-[0.14em] text-muted">{testimonial.role}</p>
+              <p className="text-xs uppercase tracking-[0.12em] text-muted">{useCase.guidanceLabel}</p>
+              <p className="mt-2 text-sm text-foreground/85">{useCase.guidance}</p>
             </div>
           </Reveal>
         ))}
