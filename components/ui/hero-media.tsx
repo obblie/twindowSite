@@ -30,12 +30,6 @@ export function HeroMedia() {
             />
 
             <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-5">
-              <p className="inline-flex rounded-full border border-border/70 bg-surface/80 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-accent backdrop-blur">
-                Passive duplicate window
-              </p>
-              <p className="hidden rounded-full border border-border/70 bg-surface/80 px-3 py-1 text-xs text-muted backdrop-blur sm:inline-flex">
-                Native HTML video
-              </p>
             </div>
           </div>
         </Reveal>
