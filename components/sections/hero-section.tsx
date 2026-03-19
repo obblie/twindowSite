@@ -46,7 +46,7 @@ export function HeroSection() {
                   variant="ghost"
                   className="h-[3.75rem] w-full border border-border/80 bg-card/35 text-[1.12rem] font-semibold text-foreground hover:bg-card/65 md:h-16"
                 >
-                  Use cases
+                  Testimonials
                 </Button>
               </div>
 
