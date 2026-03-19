@@ -3,7 +3,13 @@ const DMG_URL = "https://github.com/obblie/twindowSite/releases/download/v0.2.3/
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
-export async function GET() {
+export async function GET(request: Request) {
+  const userAgent = request.headers.get("user-agent") ?? "unknown";
+  const forwardedFor = request.headers.get("x-forwarded-for") ?? "unknown";
+  console.log(
+    `[DOWNLOAD_HIT] ts=${new Date().toISOString()} ua=${JSON.stringify(userAgent)} ip=${JSON.stringify(forwardedFor)}`
+  );
+
   try {
     const upstream = await fetch(DMG_URL, {
       cache: "no-store",
