@@ -1,4 +1,4 @@
-const DMG_URL = "https://github.com/obblie/twindowSite/releases/download/v0.2.3/twindow.dmg";
+const DMG_URL = "https://github.com/obblie/twindowSite/releases/download/v0.2.3/twindow-dmg.zip";
 const DOWNLOAD_FILENAME = "twindow.dmg";
 
 export const dynamic = "force-dynamic";
