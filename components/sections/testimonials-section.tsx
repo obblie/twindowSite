@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 const testimonials = [
   {
     quote:
-      "I teach with my class outline and presentation materials open side by side, so I can stay on track while moving through my lesson. With twindow, only my slides and live demos are mirrored to students. It's immensely reassuring knowing that I'm not going to accidentally expose my notes.",
+      "I hated mirroring my entire desktop to my students, so I relied on handwritten outlines to keep my notes private. With twindow, I can keep my outline and materials side by side while only sharing what I choose. It’s reassuring knowing I won’t accidentally expose my notes.",
     name: "Elena M.",
     role: "High School Science Teacher"
   },
@@ -16,7 +16,7 @@ const testimonials = [
   },
   {
     quote:
-      "I often present dashboards while keeping my models, and notes, off screen. With twindow, the handoff to an external display is clean and allows me to keep my eyes in front of me and focused on my material.",
+      "I often present dashboards while keeping my models, and notes, off screen. With twindow, I can build a dashboard on my extended desktop and then share that directly to zoom, or to my audience in person. It's a really simple tool and that's what I like about it.",
     name: "Priya S.",
     role: "Financial Analyst"
   }

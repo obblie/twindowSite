@@ -68,7 +68,7 @@ export function PricingSection() {
           </ul>
           <p className="mt-3 text-xs text-muted">Private by design. No data leaves your Mac.</p>
           <Button
-            href="https://twindow.lemonsqueezy.com/checkout/buy/64afebe8-47cf-4952-89e8-3261393a0c7a"
+            href="https://twindow.lemonsqueezy.com/checkout/buy/8a9efaf9-54b8-4c2e-940e-4daf2ce64de5"
             className="mt-auto w-full pt-8"
           >
             Lifetime access
