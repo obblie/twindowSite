@@ -71,7 +71,7 @@ export function PricingSection() {
             href="https://twindow.lemonsqueezy.com/checkout/buy/64afebe8-47cf-4952-89e8-3261393a0c7a"
             className="mt-auto w-full pt-8"
           >
-            Get lifetime access
+            Lifetime access
           </Button>
         </Reveal>
 
