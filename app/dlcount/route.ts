@@ -81,7 +81,7 @@ export async function GET(request: Request) {
     }
 
     const now = new Date();
-    const from = new Date(now.getTime() - 1000 * 60 * 60 * 24 * 90); // 90 days
+    const from = new Date(now.getTime() - 1000 * 60 * 60 * 24 * 30); // Render API max window: 30 days
     let startTime = from.toISOString();
     let endTime = now.toISOString();
 
@@ -121,4 +121,3 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: message }, { status: 500 });
   }
 }
-
