@@ -36,7 +36,6 @@ import {
   Urbanist,
   Work_Sans
 } from "next/font/google";
-import { PasswordGate } from "@/components/ui/password-gate";
 import "./globals.css";
 
 const inter = Inter({
@@ -261,7 +260,7 @@ export const metadata: Metadata = {
     url: "https://twindow.app",
     images: [
       {
-        url: "/og.png",
+        url: "/thumbnail.png",
         width: 1200,
         height: 630,
         alt: "twindow marketing preview"
@@ -273,7 +272,7 @@ export const metadata: Metadata = {
     title: "twindow | Never share your desktop again.",
     description:
       "Duplicate only the windows you choose to your second monitor. No full-screen mirroring.",
-    images: ["/og.png"]
+    images: ["/thumbnail.png"]
   }
 };
 
@@ -324,7 +323,7 @@ export default function RootLayout({
           "font-sans"
         ].join(" ")}
       >
-        <PasswordGate>{children}</PasswordGate>
+        {children}
       </body>
     </html>
   );
