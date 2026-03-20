@@ -249,6 +249,7 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://twindow.app"),
   title: "twindow | Never share your desktop again.",
   description:
     "Create a passive, view-only twindow of any app and move it to your second display without exposing your desktop.",
