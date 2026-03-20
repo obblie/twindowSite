@@ -65,7 +65,18 @@ export default function TermsPage() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-xl font-bold">7. Limitation of liability</h2>
+        <h2 className="text-xl font-bold">7. Platform and application restrictions</h2>
+        <p>
+          Some websites and macOS applications use platform-level protections that restrict or block screen capture,
+          screen recording, or window duplication. These protections may be enforced by macOS, browser security models,
+          DRM systems, media pipelines, or application-specific controls. twindow does not and will not bypass these
+          protections. If protected content cannot be duplicated or appears blank/limited in a twindow, that behavior is
+          expected and not a defect of the service.
+        </p>
+      </section>
+
+      <section className="space-y-3">
+        <h2 className="text-xl font-bold">8. Limitation of liability</h2>
         <p>
           To the fullest extent permitted by law, twindow will not be liable for indirect, incidental, special,
           consequential, or punitive damages, or for loss of profits, revenue, data, or goodwill arising from or related
@@ -74,7 +85,7 @@ export default function TermsPage() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-xl font-bold">8. Changes and contact</h2>
+        <h2 className="text-xl font-bold">9. Changes and contact</h2>
         <p>
           We may update these terms from time to time. Continued use after an update means you accept the revised terms.
           Questions about these terms can be sent to hello@twindow.app.

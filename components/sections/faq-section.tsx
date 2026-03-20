@@ -15,8 +15,8 @@ const faqs = [
     a: "No. twindow does not record your screen. macOS requires apps to request Screen Recording permission in order to access the contents of a window. twindow uses this permission only to live-mirror the selected window to a twindow on another display. Nothing is recorded, stored, or saved to a video file."
   },
   {
-    q: "Does it capture keystrokes?",
-    a: "No. twindows are read-only and do not pass input through."
+    q: "Does twindow save any of my data?",
+    a: "No. twindows are read-only and do not save your videofeed, or keystrokes, or anything else. Nothing leaves your device"
   },
   {
     q: "Will it work with Zoom or OBS?",

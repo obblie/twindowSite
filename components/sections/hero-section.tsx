@@ -22,8 +22,8 @@ export function HeroSection() {
                   <span className="block sm:hidden">never share</span>
                   <span className="block sm:hidden">your desktop</span>
                   <span className="block sm:hidden">again</span>
-                  <span className="hidden sm:block whitespace-nowrap">Mirror apps.</span>
-                  <span className="hidden sm:block whitespace-nowrap">Not your desktop.</span>
+                  <span className="hidden sm:block whitespace-nowrap">Mirror apps,</span>
+                  <span className="hidden sm:block whitespace-nowrap">not your desktop.</span>
                 </span>
               </h1>
               <p className="hero-description max-w-[52rem] text-base leading-relaxed text-muted sm:text-lg md:text-2xl md:leading-relaxed">
@@ -48,11 +48,6 @@ export function HeroSection() {
                 >
                   Testimonials
                 </Button>
-              </div>
-
-              <div className="inline-flex w-full flex-wrap items-center gap-3 rounded-2xl border border-border/70 bg-card/35 px-5 py-5 text-[1.02rem] sm:flex-nowrap md:px-6 md:text-[1.06rem]">
-                <span className="font-mono text-[14px] uppercase tracking-[0.24em] text-accent">Privacy Note</span>
-                <p className="text-muted">Screen duplication occurs only on your device.</p>
               </div>
             </div>
           </Reveal>

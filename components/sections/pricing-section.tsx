@@ -5,27 +5,29 @@ import { SectionHeading } from "@/components/ui/section-heading";
 const trial = [
   "Full access for 7 days",
   "No commitment, no account required",
-  "After trial: 1 twindow with watermark",
-  "All data remains local on your Mac"
+  "After trial: 1 twindow with watermark"
+  
 ];
 const individual = [
   "Lifetime license — no subscription",
   "Unlimited twindow use",
   "No watermark",
-  "Passive view-only twindows",
-  "No account required",
-  "All data remains local on your Mac"
+  "No account required"
 ];
 const organization = [
   "Bulk license pricing",
   "Everything in Individual",
-  "Centralized purchasing for teams",
-  "Priority email support",
-  "Invoice-based billing available",
-  "Deployment guidance on request"
+  "Transferrable licenses",
+  "Priority support"
+
 ];
 
 export function PricingSection() {
+  const cardPadding = "p-5 sm:p-7";
+  const metaRowClasses = "flex min-h-6 items-center justify-between gap-3";
+  const listClasses = "mt-6 flex-1 space-y-2 text-sm text-muted";
+  const ctaClasses = "mt-8 h-14 w-full justify-center text-center text-[1.05rem] font-semibold";
+
   return (
     <section id="pricing" className="section-wrap">
       <SectionHeading
@@ -35,22 +37,24 @@ export function PricingSection() {
       />
 
       <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-5 lg:grid-cols-3">
-        <Reveal className="card-surface flex h-full flex-col p-5 sm:p-7">
-          <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Premium Trial</p>
+        <Reveal className={`card-surface flex h-full flex-col ${cardPadding}`}>
+          <div className={metaRowClasses}>
+            <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Premium Trial</p>
+          </div>
           <p className="mt-3 text-3xl font-bold sm:mt-4 sm:text-4xl">7 Day Free Trial</p>
           <p className="mt-2 text-sm text-muted">Full access for 7 days. No commitment.</p>
-          <ul className="mt-6 space-y-2 text-sm text-muted">
+          <ul className={listClasses}>
             {trial.map((item) => (
               <li key={item}>• {item}</li>
             ))}
           </ul>
-          <Button href="/download" variant="secondary" className="mt-auto w-full pt-8">
+          <Button href="/download" variant="secondary" className={ctaClasses}>
             Start free trial
           </Button>
         </Reveal>
 
-        <Reveal className="card-surface border-accent/55 flex h-full flex-col p-5 sm:p-7" delay={0.08}>
-          <div className="flex items-center justify-between gap-3">
+        <Reveal className={`card-surface border-accent/55 flex h-full flex-col ${cardPadding}`} delay={0.08}>
+          <div className={metaRowClasses}>
             <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Individual</p>
           </div>
           <div className="mt-3 flex flex-wrap items-center gap-3 sm:mt-4">
@@ -61,32 +65,28 @@ export function PricingSection() {
             </span>
           </div>
           <p className="mt-2 text-sm text-muted">Pay once. Use forever.</p>
-          <ul className="mt-6 space-y-2 text-sm text-muted">
+          <ul className={listClasses}>
             {individual.map((item) => (
               <li key={item}>• {item}</li>
             ))}
           </ul>
-          <p className="mt-3 text-xs text-muted">Private by design. No data leaves your Mac.</p>
           <Button
             href="https://twindow.lemonsqueezy.com/checkout/buy/d280ea30-1b4c-477e-ba53-9e873bd8fca0"
-            className="mt-auto w-full pt-8"
+            className={ctaClasses}
           >
             Lifetime access
           </Button>
         </Reveal>
 
-        <Reveal className="card-surface flex h-full flex-col p-5 sm:p-7" delay={0.12}>
-          <div className="flex items-center justify-between gap-3">
+        <Reveal className={`card-surface flex h-full flex-col ${cardPadding}`} delay={0.12}>
+          <div className={metaRowClasses}>
             <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Organization</p>
-            <span className="inline-flex rounded-full border border-border/70 bg-card/65 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-foreground/85">
-              Teams
-            </span>
           </div>
           <div className="mt-3 flex flex-wrap items-center gap-3 sm:mt-4">
             <p className="text-3xl font-bold sm:text-4xl">Contact</p>
           </div>
-          <p className="mt-2 text-sm text-muted">Custom pricing for schools, departments, and organizations buying in volume.</p>
-          <ul className="mt-6 space-y-2 text-sm text-muted">
+          <p className="mt-2 text-sm text-muted">Custom pricing for schools, and organizations</p>
+          <ul className={listClasses}>
             {organization.map((item) => (
               <li key={item}>• {item}</li>
             ))}
@@ -94,9 +94,9 @@ export function PricingSection() {
           <Button
             href="mailto:hello@twindow.app?subject=Organization%20Pricing%20Inquiry"
             variant="secondary"
-            className="mt-auto w-full pt-8"
+            className={ctaClasses}
           >
-            Contact sales
+            Contact Sales
           </Button>
         </Reveal>
       </div>
