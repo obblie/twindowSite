@@ -29,6 +29,7 @@ export function PricingSection() {
   const blurbClasses = "mt-2 min-h-[2.75rem] text-sm text-muted";
   const listClasses = "mt-6 flex-1 space-y-2 text-sm text-muted";
   const ctaClasses = "!mt-6 h-14 w-full justify-center text-center text-[1.05rem] font-semibold";
+  const ctaNoteClasses = "mt-2 min-h-5 text-center text-sm font-normal text-white";
 
   return (
     <section id="pricing" className="section-wrap">
@@ -55,6 +56,9 @@ export function PricingSection() {
           <Button href="/download" variant="secondary" className={ctaClasses}>
             Start free trial
           </Button>
+          <p className={`${ctaNoteClasses} invisible`} aria-hidden="true">
+            Placeholder
+          </p>
         </Reveal>
 
         <Reveal className={`card-surface border-accent/55 flex h-full flex-col ${cardPadding}`} delay={0.08}>
@@ -77,6 +81,9 @@ export function PricingSection() {
           <Button href="https://twindow.lemonsqueezy.com/checkout/buy/d280ea30-1b4c-477e-ba53-9e873bd8fca0?embed=1&logo=0" className={`${ctaClasses} lemonsqueezy-button`}>
             Buy Now
           </Button>
+          <p className={ctaNoteClasses}>
+            <mark className="bg-white text-black bg-none">**License Key Delivered via Email</mark>
+          </p>
         </Reveal>
 
         <Reveal className={`card-surface flex h-full flex-col ${cardPadding}`} delay={0.12}>
@@ -99,6 +106,9 @@ export function PricingSection() {
           >
             Contact Sales
           </Button>
+          <p className={`${ctaNoteClasses} invisible`} aria-hidden="true">
+            Placeholder
+          </p>
         </Reveal>
       </div>
 
