@@ -12,6 +12,7 @@ export function HeroMedia() {
           title="Never share your desktop again"
           description="Create a twindow in seconds, and drag it to a second display. "
           className="px-1 md:px-2"
+          descriptionClassName="!text-[21px] md:!text-[21px]"
         />
 
         <Reveal

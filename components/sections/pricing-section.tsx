@@ -4,8 +4,8 @@ import { SectionHeading } from "@/components/ui/section-heading";
 
 const trial = [
   "Full access for 7 days",
-  "No commitment, no signup required",
-  "After trial: 1 twindow with watermark"
+  "No signup required",
+  "After trial: 1 twindow w/ watermark"
   
 ];
 const individual = [
@@ -27,8 +27,13 @@ export function PricingSection() {
   const metaRowClasses = "flex min-h-6 items-center justify-between gap-3";
   const valueRowClasses = "mt-3 flex min-h-[3.5rem] flex-wrap items-center gap-3 sm:mt-4";
   const blurbClasses = "mt-2 min-h-[2.75rem] text-sm text-muted";
-  const listClasses = "mt-6 flex-1 space-y-2 text-sm text-muted";
-  const ctaClasses = "!mt-6 h-14 w-full justify-center text-center text-[1.05rem] font-semibold";
+  const individualBlurbClasses = "mt-2 min-h-[2.75rem] text-base text-muted";
+  const trialListClasses = "mt-6 flex-1 space-y-2 text-[18px] text-muted";
+  const individualListClasses = "mt-6 flex-1 space-y-2 text-[18px] text-muted";
+  const organizationListClasses = "mt-6 flex-1 space-y-2 text-[18px] text-muted";
+  const trialCtaClasses = "!mt-6 h-14 w-full justify-center text-center !text-[22px] font-semibold";
+  const individualCtaClasses = "!mt-6 h-14 w-full justify-center text-center !text-[18px] font-semibold";
+  const organizationCtaClasses = "!mt-6 h-14 w-full justify-center text-center !text-[18px] font-semibold";
   const ctaNoteClasses = "mt-2 flex min-h-9 items-end justify-center text-center text-sm font-normal text-white";
 
   return (
@@ -48,13 +53,13 @@ export function PricingSection() {
             <p className="text-3xl font-bold sm:text-4xl">7 Day Free Trial</p>
           </div>
           <p className={blurbClasses}>Full access for 7 days. No commitment.</p>
-          <ul className={listClasses}>
+          <ul className={trialListClasses}>
             {trial.map((item) => (
               <li key={item}>• {item}</li>
             ))}
           </ul>
-          <Button href="/download" variant="secondary" className={ctaClasses}>
-            Start free trial
+          <Button href="/download" variant="secondary" className={trialCtaClasses}>
+            Download 
           </Button>
           <p className={`${ctaNoteClasses} invisible`} aria-hidden="true">
             Placeholder
@@ -72,17 +77,17 @@ export function PricingSection() {
               Earlybird
             </span>
           </div>
-          <p className={blurbClasses}>Pay once. Lifetime access.</p>
-          <ul className={listClasses}>
+          <p className={individualBlurbClasses}>Pay once. Lifetime access.</p>
+          <ul className={individualListClasses}>
             {individual.map((item) => (
               <li key={item}>• {item}</li>
             ))}
           </ul>
-          <Button href="https://twindow.lemonsqueezy.com/checkout/buy/d280ea30-1b4c-477e-ba53-9e873bd8fca0?embed=1&logo=0" className={`${ctaClasses} lemonsqueezy-button`}>
+          <Button href="https://twindow.lemonsqueezy.com/checkout/buy/d280ea30-1b4c-477e-ba53-9e873bd8fca0?embed=1&logo=0" className={`${individualCtaClasses} lemonsqueezy-button`}>
             Buy Now
           </Button>
           <p className={ctaNoteClasses}>
-            <mark className="inline-flex rounded-full border border-white/60 bg-white px-3 py-1 text-[0.72rem] font-semibold tracking-[0.08em] text-slate-900 ring-1 ring-white/80 shadow-[0_0_34px_rgba(255,255,255,0.72)]">
+            <mark className="inline-flex rounded-full border border-white/60 bg-white px-3 py-1 text-sm font-normal tracking-[0.03em] text-slate-900 ring-1 ring-white/80 shadow-[0_0_34px_rgba(255,255,255,0.72)]">
               License Key Delivered via Email
             </mark>
           </p>
@@ -96,7 +101,7 @@ export function PricingSection() {
             <p className="text-3xl font-bold sm:text-4xl">Contact</p>
           </div>
           <p className={blurbClasses}>Custom pricing for schools and organizations</p>
-          <ul className={listClasses}>
+          <ul className={organizationListClasses}>
             {organization.map((item) => (
               <li key={item}>• {item}</li>
             ))}
@@ -104,7 +109,7 @@ export function PricingSection() {
           <Button
             href="mailto:hello@twindow.app?subject=Organization%20Pricing%20Inquiry"
             variant="secondary"
-            className={ctaClasses}
+            className={organizationCtaClasses}
           >
             Contact Sales
           </Button>

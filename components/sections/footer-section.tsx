@@ -11,18 +11,18 @@ export function FooterSection() {
             <h2 className="mt-2 text-2xl font-extrabold tracking-tight md:text-3xl">
               Don&apos;t share your desktop. Share twindows instead.
             </h2>
-            <p className="mt-3 text-sm text-muted md:text-base">
+            <p className="mt-3 text-[18px] text-muted md:text-[18px]">
               Keep your real workspace private while presenting only what people need to see.
             </p>
           </div>
-          <Button href="/download" variant="secondary" className="px-4 py-2.5 text-[13px] md:px-5">
+          <Button href="/download" variant="secondary" className="px-4 py-2.5 text-[18px] md:px-5">
             Download twindow
           </Button>
         </div>
 
         <div className="flex flex-col justify-between gap-6 pt-1 text-sm text-muted/85 md:flex-row md:items-center">
           <div className="text-muted/85">
-            <p>Email: hello@twindow.app</p>
+            <p className="text-[20px]">Email: hello@twindow.app</p>
           </div>
           <div className="flex flex-col gap-3 text-left md:items-end md:text-right">
             <nav aria-label="Legal" className="flex flex-wrap gap-x-4 gap-y-2">
@@ -36,7 +36,7 @@ export function FooterSection() {
                 Return Policy
               </Link>
             </nav>
-            <p className="text-muted/75">© {new Date().getFullYear()} twindow. All rights reserved.</p>
+            <p className="text-[18px] text-muted/75">© {new Date().getFullYear()} twindow. All rights reserved.</p>
           </div>
         </div>
       </div>

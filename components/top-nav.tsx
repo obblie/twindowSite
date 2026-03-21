@@ -27,7 +27,7 @@ export function TopNav() {
   );
   const indicatorIndex = hoveredIndex ?? activeIndex;
   const utilityButtonClasses =
-    "inline-flex h-9 items-center justify-center rounded-md border border-border/55 bg-card/25 px-3.5 py-1.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-foreground/90 transition duration-200 hover:bg-card/45";
+    "inline-flex h-9 items-center justify-center rounded-md border border-border/55 bg-card/25 px-3.5 py-1.5 text-[14px] font-semibold uppercase tracking-[0.12em] text-foreground/90 transition duration-200 hover:bg-card/45";
 
   useEffect(() => {
     const updateActiveFromScroll = () => {
@@ -95,7 +95,7 @@ export function TopNav() {
       <div className="mx-auto w-full max-w-[102rem] px-4 sm:px-5 md:px-8 lg:px-10">
         <div className="grid h-14 grid-cols-[auto,1fr] items-center gap-3 md:h-16 md:gap-4 lg:grid-cols-[auto,1fr,auto]">
           <a href="#hero" className="focus-ring inline-flex min-w-0 items-center gap-2 rounded-lg px-2 py-1">
-            <span className="font-mono text-[14px] font-semibold lowercase tracking-[0.22em] text-accent md:text-[15px]">
+            <span className="font-mono text-[14px] font-semibold lowercase tracking-[0.22em] text-accent md:text-[16px]">
               twindow
             </span>
           </a>
@@ -124,7 +124,7 @@ export function TopNav() {
                 }}
                 onMouseEnter={() => setHoveredIndex(index)}
                 className={cn(
-                  "focus-ring relative z-10 rounded-md px-4 py-1.5 text-center font-mono text-[11px] uppercase tracking-[0.14em] whitespace-nowrap transition",
+                  "focus-ring relative z-10 rounded-md px-4 py-1.5 text-center font-mono text-[14px] uppercase tracking-[0.14em] whitespace-nowrap transition",
                   index === indicatorIndex
                     ? "text-accent-foreground"
                     : active === item.id

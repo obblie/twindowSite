@@ -35,16 +35,16 @@ export function HeroSection() {
 
             <div className="mt-12 w-full max-w-[50rem] space-y-3 sm:mt-14">
               <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3">
-                <Button href="/download" className="h-[3.75rem] w-full text-[1.12rem] font-semibold shadow-soft md:h-16">
+                <Button href="/download" className="h-[3.75rem] w-full !text-[18px] font-semibold shadow-soft md:h-16">
                   Download
                 </Button>
-                <Button href="#hero-demo" variant="secondary" className="h-[3.75rem] w-full text-[1.12rem] font-semibold md:h-16">
+                <Button href="#hero-demo" variant="secondary" className="h-[3.75rem] w-full !text-[18px] font-semibold md:h-16">
                   Watch demo
                 </Button>
                 <Button
                   href="#testimonials"
                   variant="ghost"
-                  className="h-[3.75rem] w-full border border-border/80 bg-card/35 text-[1.12rem] font-semibold text-foreground hover:bg-card/65 md:h-16"
+                  className="h-[3.75rem] w-full border border-border/80 bg-card/35 !text-[18px] font-semibold text-foreground hover:bg-card/65 md:h-16"
                 >
                   Testimonials
                 </Button>

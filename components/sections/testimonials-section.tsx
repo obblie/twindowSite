@@ -34,7 +34,7 @@ export function TestimonialsSection() {
       <div className="mt-8 grid gap-4 sm:mt-10 lg:grid-cols-3">
         {testimonials.map((testimonial, index) => (
           <Reveal key={testimonial.name} delay={index * 0.04} className="card-surface h-full p-6">
-            <p className="text-sm leading-7 text-foreground/90">{testimonial.quote}</p>
+            <p className="text-base leading-7 text-foreground/90">{testimonial.quote}</p>
             <div className="mt-6 border-t border-border/60 pt-4">
               <p className="text-sm font-semibold">{testimonial.name}</p>
               <p className="mt-1 text-xs uppercase tracking-[0.14em] text-muted">{testimonial.role}</p>
