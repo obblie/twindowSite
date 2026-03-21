@@ -44,7 +44,7 @@ export function HeroSection() {
                 <Button
                   href="#testimonials"
                   variant="ghost"
-                  className="h-[3.75rem] w-full border border-border/80 bg-card/35 !text-[18px] font-semibold text-foreground hover:bg-card/65 md:h-16"
+                  className="h-[3.75rem] w-full border border-border bg-card !text-[18px] font-semibold !text-foreground hover:bg-card/65 md:h-16"
                 >
                   Testimonials
                 </Button>
