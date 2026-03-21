@@ -29,7 +29,7 @@ export function LegalPageShell({ eyebrow, title, summary, children }: LegalPageS
       </header>
 
       <main className="section-wrap">
-        <article className="card-surface mx-auto max-w-4xl space-y-8 p-6 md:p-10">
+        <article className="card-surface mx-auto max-w-4xl space-y-8 p-6 text-[16px] md:p-10">
           <header className="space-y-3">
             <p className="kicker">{eyebrow}</p>
             <h1 className="text-3xl font-extrabold tracking-tight md:text-5xl">{title}</h1>
