@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { FontSelector } from "@/components/ui/font-selector";
@@ -95,6 +96,7 @@ export function TopNav() {
       <div className="mx-auto w-full max-w-[102rem] px-4 sm:px-5 md:px-8 lg:px-10">
         <div className="grid h-14 grid-cols-[auto,1fr] items-center gap-3 md:h-16 md:gap-4 lg:grid-cols-[auto,1fr,auto]">
           <a href="#hero" className="focus-ring inline-flex min-w-0 items-center gap-2 rounded-lg px-2 py-1">
+            <Image src="/logo.png" alt="Twindow logo" width={36} height={36} className="h-[36px] w-[36px] shrink-0" />
             <span className="font-mono text-[14px] font-semibold lowercase tracking-[0.22em] text-accent md:text-[16px]">
               twindow
             </span>
