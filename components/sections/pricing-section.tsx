@@ -29,7 +29,7 @@ export function PricingSection() {
   const blurbClasses = "mt-2 min-h-[2.75rem] text-sm text-muted";
   const listClasses = "mt-6 flex-1 space-y-2 text-sm text-muted";
   const ctaClasses = "!mt-6 h-14 w-full justify-center text-center text-[1.05rem] font-semibold";
-  const ctaNoteClasses = "mt-2 min-h-5 text-center text-sm font-normal text-white";
+  const ctaNoteClasses = "mt-2 flex min-h-9 items-end justify-center text-center text-sm font-normal text-white";
 
   return (
     <section id="pricing" className="section-wrap">
@@ -82,7 +82,9 @@ export function PricingSection() {
             Buy Now
           </Button>
           <p className={ctaNoteClasses}>
-            <mark className="bg-white text-black bg-none">**License Key Delivered via Email</mark>
+            <mark className="inline-flex rounded-full border border-white/60 bg-white px-3 py-1 text-[0.72rem] font-semibold tracking-[0.08em] text-slate-900 ring-1 ring-white/80 shadow-[0_0_34px_rgba(255,255,255,0.72)]">
+              License Key Delivered via Email
+            </mark>
           </p>
         </Reveal>
 

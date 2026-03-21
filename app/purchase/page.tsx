@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { FooterSection } from "@/components/sections/footer-section";
 import { Button } from "@/components/ui/button";
@@ -19,6 +20,11 @@ export const metadata: Metadata = {
 };
 
 export default function PurchasePage() {
+  const cardPadding = "p-5 sm:p-7";
+  const metaRowClasses = "flex min-h-6 items-center justify-between gap-3";
+  const listClasses = "mt-6 flex-1 space-y-2 text-sm text-muted";
+  const ctaClasses = "mt-8 h-14 w-full justify-center text-center text-[1.05rem] font-semibold";
+
   return (
     <>
       <header className="border-b border-border/70 bg-surface/80 backdrop-blur-xl">
@@ -39,9 +45,11 @@ export default function PurchasePage() {
       </header>
 
       <main className="section-wrap">
-        <section className="mx-auto max-w-2xl">
-          <div className="card-surface border-accent/55 flex h-full flex-col p-5 sm:p-7">
-            <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Individual</p>
+        <section className="mx-auto grid w-full max-w-6xl gap-5 lg:grid-cols-2">
+          <div className={`card-surface border-accent/55 flex h-full flex-col ${cardPadding}`}>
+            <div className={metaRowClasses}>
+              <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Individual</p>
+            </div>
             <div className="mt-3 flex flex-wrap items-center gap-3 sm:mt-4">
               <p className="text-xl font-semibold text-muted line-through sm:text-2xl">$14.99</p>
               <p className="text-3xl font-bold sm:text-4xl">$9.99</p>
@@ -50,15 +58,28 @@ export default function PurchasePage() {
               </span>
             </div>
             <p className="mt-2 text-sm text-muted">Pay once. Lifetime access.</p>
-            <ul className="mt-6 space-y-2 text-sm text-muted">
+            <ul className={listClasses}>
               {individual.map((item) => (
                 <li key={item}>• {item}</li>
               ))}
             </ul>
-            <Button href={checkoutUrl} className="lemonsqueezy-button mt-8 h-14 w-full justify-center text-center text-[1.05rem] font-semibold">
+            <Button href={checkoutUrl} className={`${ctaClasses} lemonsqueezy-button`}>
               Buy Now
             </Button>
-            <p className="mt-2 text-center text-xs text-muted">After purchase, your license key will be emailed.</p>
+            <p className="mt-2 h-0 text-center text-xs text-muted">After purchase, your license key will be emailed.</p>
+          </div>
+
+          <div className="card-surface flex items-center justify-center p-5 sm:p-7">
+            <div className="relative w-full overflow-hidden rounded-2xl border border-border/60 bg-card/40 p-4">
+              <Image
+                src="/twindowBox.jpg"
+                alt="twindow product box"
+                width={1400}
+                height={1400}
+                className="h-auto w-full rounded-xl object-cover"
+                priority
+              />
+            </div>
           </div>
         </section>
       </main>
@@ -67,4 +88,3 @@ export default function PurchasePage() {
     </>
   );
 }
-
