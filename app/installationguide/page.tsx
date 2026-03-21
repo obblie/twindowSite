@@ -57,8 +57,8 @@ export default function InstallationGuidePage() {
           <br />
           <p className="text-[22px] font-semibold">Step 5a: Approve the macOS alert</p>
           <p className="text-[18px]">
-            macOS will display a Screen Recording prompt when you first run twindow saying: twindow would like to to record your screen and audio. Click
-            <strong> Open System Settings</strong> to allow. This will open the System Settings app, where a toggle will appear to allow twindow to record your screen and audio. Remember, twindow is using this permission to duplicate the selected window to a twindow on another display. Nothing is recorded, stored, or saved to a video file.
+            macOS will display a Screen Recording prompt when you first run twindow saying: twindow would like to to record this screen's screen and audio. Click
+            <strong> Open System Settings</strong> to allow. This will open the System Settings.
           </p>
           <Image
             src="/0macOSScreenRecordingPermissionsAlert.png"
@@ -74,7 +74,7 @@ export default function InstallationGuidePage() {
           <p className="text-[22px] font-semibold">Step 5b: Enable twindow in Screen &amp; System Audio Recording</p>
           <p className="text-[18px]">
             In <strong>Privacy &amp; Security</strong>, find <strong>Screen &amp; System Audio Recording</strong> and turn on
-            the toggle next to <strong>twindow</strong>.
+            the toggle next to <strong>twindow</strong>. indow to record your screen and audio. Remember, twindow is using this permission to duplicate the selected window to a twindow on another display. Nothing is recorded, stored, or saved to a video file.
           </p>
           <Image
             src="/1systemAndAudioRecording.png"
@@ -114,8 +114,8 @@ export default function InstallationGuidePage() {
             height={1548}
             className="w-full rounded-xl border border-border/70"
           />
-          
-          <h2 className="text-[26px] font-bold">You should not be able to launch the application</h2>
+
+          <h2 className="text-[26px] font-bold">You should now be able to launch the twindow application</h2>
         </div>
       </section>
 
