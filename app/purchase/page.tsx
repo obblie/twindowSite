@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { FooterSection } from "@/components/sections/footer-section";
 import { Button } from "@/components/ui/button";
@@ -45,7 +44,7 @@ export default function PurchasePage() {
       </header>
 
       <main className="section-wrap">
-        <section className="mx-auto grid w-full max-w-6xl gap-5 lg:grid-cols-2">
+        <section className="mx-auto flex w-full max-w-[21.6rem] flex-col gap-5">
           <div className={`card-surface border-accent/55 flex h-full flex-col ${cardPadding}`}>
             <div className={metaRowClasses}>
               <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">Individual</p>
@@ -67,19 +66,6 @@ export default function PurchasePage() {
               Buy Now
             </Button>
             <p className="mt-2 h-0 text-center text-xs text-muted">After purchase, your license key will be emailed.</p>
-          </div>
-
-          <div className="card-surface flex items-center justify-center p-5 sm:p-7">
-            <div className="relative w-full overflow-hidden rounded-2xl border border-border/60 bg-card/40 p-4">
-              <Image
-                src="/twindowBox.jpg"
-                alt="twindow product box"
-                width={1400}
-                height={1400}
-                className="h-auto w-full rounded-xl object-cover"
-                priority
-              />
-            </div>
           </div>
         </section>
       </main>
