@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     q: "Does twindow save any of my data?",
-    a: "No. twindows are read-only and do not save your videofeed, or keystrokes, or anything else. Nothing leaves your device"
+    a: "No. twindows are read-only and do not save your videofeed, or keystrokes, or anything else. Nothing leaves your device."
   },
   {
     q: "Will it work with Zoom or OBS?",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import {
   Assistant,
   Barlow,
@@ -324,6 +325,7 @@ export default function RootLayout({
           "font-sans"
         ].join(" ")}
       >
+        <Script src="https://assets.lemonsqueezy.com/lemon.js" strategy="afterInteractive" />
         {children}
       </body>
     </html>

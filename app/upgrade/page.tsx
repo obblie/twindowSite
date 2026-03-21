@@ -4,6 +4,9 @@ import { FooterSection } from "@/components/sections/footer-section";
 import { Button } from "@/components/ui/button";
 
 const checkoutUrl = process.env.NEXT_PUBLIC_LEMON_SQUEEZY_CHECKOUT_URL ?? "";
+const checkoutOverlayUrl = checkoutUrl
+  ? `${checkoutUrl}${checkoutUrl.includes("?") ? "&" : "?"}embed=1&logo=0`
+  : "";
 
 export const metadata: Metadata = {
   title: "Upgrade | twindow",
@@ -36,7 +39,7 @@ export default function UpgradePage() {
             <p className="kicker">Upgrade</p>
             <h1 className="text-3xl font-extrabold tracking-tight md:text-5xl">Unlock twindow premium</h1>
             <p className="max-w-2xl text-sm leading-7 text-muted md:text-base">
-              One-time purchase. After checkout, Lemon Squeezy emails your license key.
+              One-time purchase. Checkout opens in a secure Lemon Squeezy overlay.
             </p>
           </header>
 
@@ -48,8 +51,17 @@ export default function UpgradePage() {
             </ul>
           </section>
 
+          <section className="rounded-2xl border border-border/70 bg-card/35 p-5 md:p-6">
+            <p className="font-mono text-xs uppercase tracking-[0.16em] text-accent">After purchase</p>
+            <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm text-foreground/92 md:text-base">
+              <li>Your license key is emailed automatically by Lemon Squeezy.</li>
+              <li>Open twindow on your Mac and paste the key into the activation field.</li>
+              <li>If you do not see the email, check spam or promotions folders.</li>
+            </ol>
+          </section>
+
           <section className="space-y-3">
-            <Button href={checkoutUrl || "#"} className="w-full sm:w-auto">
+            <Button href={checkoutOverlayUrl || "#"} className="w-full sm:w-auto lemonsqueezy-button">
               Buy Now
             </Button>
             {!checkoutUrl ? (
