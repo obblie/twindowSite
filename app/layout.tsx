@@ -253,7 +253,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://twindow.app"),
   title: "twindow | Mirror apps, not your desktop.",
   description:
-    "Create a passive, view-only twindow of any app and move it to your second display without exposing your desktop.",
+    "Mirror any application window to a second display - without sharing your desktop. A private, view-only window mirroring app for macOS.",
   openGraph: {
     title: "twindow | Mirror apps, not your desktop.",
     description:
