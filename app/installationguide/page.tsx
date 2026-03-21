@@ -57,8 +57,8 @@ export default function InstallationGuidePage() {
           <br />
           <p className="text-[22px] font-semibold">Step 5a: Approve the macOS alert</p>
           <p className="text-[18px]">
-            macOS will display a Screen Recording prompt when you first run twindow saying: twindow would like to to record this screen's screen and audio. Click
-            <strong> Open System Settings</strong> to allow. This will open the System Settings.
+            macOS will display a Screen Recording prompt when you first run twindow saying twindow wants to record this
+            screen&apos;s screen and audio. Click <strong>Open System Settings</strong> to allow access.
           </p>
           <Image
             src="/0macOSScreenRecordingPermissionsAlert.png"
