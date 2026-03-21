@@ -36,7 +36,7 @@ export default function UpgradePage() {
             <p className="kicker">Upgrade</p>
             <h1 className="text-3xl font-extrabold tracking-tight md:text-5xl">Unlock twindow premium</h1>
             <p className="max-w-2xl text-sm leading-7 text-muted md:text-base">
-              One-time purchase. No account required. After checkout, Lemon Squeezy emails your license key.
+              One-time purchase. After checkout, Lemon Squeezy emails your license key.
             </p>
           </header>
 

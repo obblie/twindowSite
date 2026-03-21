@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 
 const trial = [
   "Full access for 7 days",
-  "No commitment, no account required",
+  "No commitment, no signup required",
   "After trial: 1 twindow with watermark"
   
 ];
@@ -12,7 +12,7 @@ const individual = [
   "Lifetime license — no subscription",
   "Unlimited twindow use",
   "No watermark",
-  "No account required"
+  "Redaction enabled"
 ];
 const organization = [
   "Bulk license pricing",
@@ -64,17 +64,17 @@ export function PricingSection() {
               Earlybird
             </span>
           </div>
-          <p className="mt-2 text-sm text-muted">Pay once. Use forever.</p>
+          <p className="mt-2 text-sm text-muted">Pay once. Lifetime access.</p>
           <ul className={listClasses}>
             {individual.map((item) => (
               <li key={item}>• {item}</li>
             ))}
           </ul>
           <Button
-            href="https://twindow.lemonsqueezy.com/checkout/buy/d280ea30-1b4c-477e-ba53-9e873bd8fca0"
+            href="https://twindow.lemonsqueezy.com/checkout/buy/d280ea30-1b4c-477e-ba53-9e873bd8fca0?logo=0"
             className={ctaClasses}
           >
-            Lifetime access
+            Buy Now
           </Button>
         </Reveal>
 
