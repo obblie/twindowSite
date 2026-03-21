@@ -37,7 +37,7 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
       type="button"
       onClick={toggleTheme}
       className={cn(
-        "focus-ring rounded-lg border border-border bg-card/70 px-3 py-2 font-mono text-[11px] uppercase tracking-[0.14em] text-foreground/90",
+        "focus-ring inline-flex items-center justify-center transition duration-200",
         className
       )}
       aria-label="Toggle light mode"

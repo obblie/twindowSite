@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { FontSelector } from "@/components/ui/font-selector";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const navItems = [
@@ -27,6 +26,8 @@ export function TopNav() {
     navItems.findIndex((item) => item.id === active)
   );
   const indicatorIndex = hoveredIndex ?? activeIndex;
+  const utilityButtonClasses =
+    "inline-flex h-9 items-center justify-center rounded-md border border-border/55 bg-card/25 px-3.5 py-1.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-foreground/90 transition duration-200 hover:bg-card/45";
 
   useEffect(() => {
     const updateActiveFromScroll = () => {
@@ -141,14 +142,10 @@ export function TopNav() {
             <div className="hidden">
               <FontSelector />
             </div>
-            <ThemeToggle className="h-9 rounded-md border-border/55 bg-card/25 px-3.5 py-1.5 text-[12px] font-medium tracking-[0.12em] text-foreground/90 hover:bg-card/45" />
-            <Button
-              href="/download"
-              variant="secondary"
-              className="hidden h-9 rounded-md border-border/55 bg-card/25 px-3.5 py-1.5 text-[12px] font-medium tracking-[0.12em] text-foreground/90 hover:bg-card/45 sm:inline-flex"
-            >
-              Download
-            </Button>
+            <ThemeToggle className={utilityButtonClasses} />
+            <a href="/download" className={`focus-ring hidden sm:inline-flex ${utilityButtonClasses}`}>
+              DOWNLOAD
+            </a>
           </div>
         </div>
       </div>
