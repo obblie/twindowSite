@@ -251,11 +251,11 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://twindow.app"),
-  title: "twindow | Mirror apps, not your desktop.",
+  title: "twindow | Reclaim your desktop, share with intention.",
   description:
     "Mirror any application window to a second display - without sharing your desktop. A private, view-only window mirroring app for macOS.",
   openGraph: {
-    title: "twindow | Mirror apps, not your desktop.",
+    title: "twindow | Reclaim your desktop, share with intention.",
     description:
       "Selective app window duplication for macOS. Private demos and presentations with full control.",
     type: "website",
@@ -271,7 +271,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "twindow | Mirror apps, not your desktop.",
+    title: "twindow | “Reclaim your desktop, share with intention.",
     description:
       "Duplicate only the windows you choose to your second monitor. No full-screen mirroring.",
     images: ["/thumbnail.png"]
