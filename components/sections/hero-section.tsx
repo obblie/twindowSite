@@ -19,11 +19,8 @@ export function HeroSection() {
                   twindow
                 </span>
                 <span className="block text-[clamp(2rem,12vw,3.3rem)] leading-[1.06] text-accent md:text-[clamp(3.4rem,5.5vw,7.4rem)]">
-                  <span className="block sm:hidden">never share</span>
-                  <span className="block sm:hidden">your desktop</span>
-                  <span className="block sm:hidden">again</span>
-                  <span className="hidden sm:block whitespace-nowrap">Mirror apps,</span>
-                  <span className="hidden sm:block whitespace-nowrap">not your desktop</span>
+                  <span className="block">Mirror apps,</span>
+                  <span className="block">not your desktop</span>
                 </span>
               </h1>
               <p className="hero-description max-w-[52rem] text-base leading-relaxed text-muted sm:text-lg md:text-2xl md:leading-relaxed">
