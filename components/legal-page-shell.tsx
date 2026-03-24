@@ -15,7 +15,7 @@ export function LegalPageShell({ eyebrow, title, summary, children }: LegalPageS
         <div className="container-shell flex min-h-16 items-center justify-between gap-4 py-4">
           <Link
             href="/"
-            className="focus-ring inline-flex items-center gap-2 rounded-lg px-2 py-1 font-mono text-xs uppercase tracking-[0.18em] text-accent"
+            className="focus-ring inline-flex items-center gap-2 rounded-lg px-2 py-1 font-mono text-xs lowercase tracking-[0.18em] text-accent"
           >
             twindow
           </Link>
