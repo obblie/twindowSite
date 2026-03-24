@@ -23,7 +23,7 @@ export function HeroSection() {
                   <span className="block sm:hidden">your desktop</span>
                   <span className="block sm:hidden">again</span>
                   <span className="hidden sm:block whitespace-nowrap">Mirror apps,</span>
-                  <span className="hidden sm:block whitespace-nowrap">not your desktop!</span>
+                  <span className="hidden sm:block whitespace-nowrap">not your desktop</span>
                 </span>
               </h1>
               <p className="hero-description max-w-[52rem] text-base leading-relaxed text-muted sm:text-lg md:text-2xl md:leading-relaxed">
