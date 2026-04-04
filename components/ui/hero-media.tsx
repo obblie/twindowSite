@@ -26,7 +26,7 @@ export function HeroMedia() {
               poster={withBasePath("/twindowAd.png")}
               ariaLabel="twindow product demo video"
               sources={[
-                { src: withBasePath("/twindowDemo1.mp4"), type: "video/mp4" }
+                { src: withBasePath("/twindowDemo.mov"), type: "video/mp4" }
               ]}
             />
 
