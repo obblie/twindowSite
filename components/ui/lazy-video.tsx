@@ -108,6 +108,7 @@ export function LazyVideo({ ariaLabel, className, poster, sources }: LazyVideoPr
   return (
     <div ref={containerRef} className="h-full w-full">
       <video
+        {...({ "webkit-playsinline": "true" } as Record<string, string>)}
         ref={videoRef}
         className={className}
         autoPlay
