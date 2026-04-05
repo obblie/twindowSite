@@ -56,6 +56,12 @@ export function LazyVideo({ ariaLabel, className, poster, sources }: LazyVideoPr
 
     if (!video || !shouldLoad) return;
 
+    // Mobile browsers can require these runtime properties (not just attributes)
+    // before allowing muted inline autoplay.
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+
     const resumePlayback = () => {
       if (!isInView) return;
       void video.play().catch(() => {});
@@ -76,12 +82,26 @@ export function LazyVideo({ ariaLabel, className, poster, sources }: LazyVideoPr
       video.pause();
     }
 
+    const retryId = window.setInterval(() => {
+      if (!isInView || document.visibilityState !== "visible") return;
+      void video.play().catch(() => {});
+    }, 1200);
+
     video.addEventListener("canplay", resumePlayback);
+    video.addEventListener("loadeddata", resumePlayback);
+    video.addEventListener("loadedmetadata", resumePlayback);
     document.addEventListener("visibilitychange", handleVisibilityChange);
+    window.addEventListener("focus", resumePlayback);
+    window.addEventListener("pageshow", resumePlayback);
 
     return () => {
+      window.clearInterval(retryId);
       video.removeEventListener("canplay", resumePlayback);
+      video.removeEventListener("loadeddata", resumePlayback);
+      video.removeEventListener("loadedmetadata", resumePlayback);
       document.removeEventListener("visibilitychange", handleVisibilityChange);
+      window.removeEventListener("focus", resumePlayback);
+      window.removeEventListener("pageshow", resumePlayback);
     };
   }, [isInView, shouldLoad]);
 
