@@ -46,8 +46,8 @@ export function HeroMedia() {
         </Reveal>
 
         <div className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
-          <p className="text-center text-sm font-medium text-foreground/85">Private Display</p>
-          <p className="text-center text-sm font-medium text-foreground/85">Extended Desktop</p>
+          <p className="text-center text-3xl font-bold tracking-tight md:text-4xl">Private Display</p>
+          <p className="text-center text-3xl font-bold tracking-tight md:text-4xl">Extended Desktop</p>
         </div>
       </div>
     </section>
