@@ -105,6 +105,35 @@ export function LazyVideo({ ariaLabel, className, poster, sources }: LazyVideoPr
     };
   }, [isInView, shouldLoad]);
 
+  useEffect(() => {
+    if (!shouldLoad) return;
+
+    const unlockPlayback = () => {
+      const video = videoRef.current;
+      if (!video) return;
+
+      video.muted = true;
+      video.defaultMuted = true;
+      video.playsInline = true;
+
+      if (!isInView) return;
+      void video.play().catch(() => {});
+    };
+
+    const pointerOpts: AddEventListenerOptions = { passive: true, once: true };
+    const keyOpts: AddEventListenerOptions = { once: true };
+
+    window.addEventListener("pointerdown", unlockPlayback, pointerOpts);
+    window.addEventListener("touchend", unlockPlayback, pointerOpts);
+    window.addEventListener("keydown", unlockPlayback, keyOpts);
+
+    return () => {
+      window.removeEventListener("pointerdown", unlockPlayback);
+      window.removeEventListener("touchend", unlockPlayback);
+      window.removeEventListener("keydown", unlockPlayback);
+    };
+  }, [isInView, shouldLoad]);
+
   return (
     <div ref={containerRef} className="h-full w-full">
       <video
