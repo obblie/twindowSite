@@ -21,14 +21,24 @@ export function HeroMedia() {
         >
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-accent/20 via-transparent to-cyan-400/15" />
           <div className="relative overflow-hidden">
-            <LazyVideo
-              className="block h-auto w-full bg-transparent"
-              poster={withBasePath("/twindowAd.png")}
-              ariaLabel="twindow product demo video"
-              sources={[
-                { src: withBasePath("/twindowDemo.mov"), type: "video/mp4" }
-              ]}
-            />
+            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+              <LazyVideo
+                className="block h-auto w-full bg-transparent"
+                poster={withBasePath("/twindowAd.png")}
+                ariaLabel="twindow product demo video left panel"
+                sources={[
+                  { src: withBasePath("/twindowDemo_a.mov"), type: "video/mp4" }
+                ]}
+              />
+              <LazyVideo
+                className="block h-auto w-full bg-transparent"
+                poster={withBasePath("/twindowAd.png")}
+                ariaLabel="twindow product demo video right panel"
+                sources={[
+                  { src: withBasePath("/twindowDemo_b.mov"), type: "video/mp4" }
+                ]}
+              />
+            </div>
 
             <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-5">
             </div>
