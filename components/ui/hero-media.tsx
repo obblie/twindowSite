@@ -47,17 +47,15 @@ export function HeroMedia() {
 
         <div className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
           <p className="text-center text-3xl font-bold tracking-tight md:text-4xl">
-            Private Display:
-            {" "}
-            <span className="text-base font-medium text-muted md:text-lg">
-            Keep your notes, messages, and real workspace visible only to you.
+            Private Display
+            <span className="mt-1 block text-base font-medium text-muted md:text-lg">
+              Keep your notes, messages, and real workspace visible only to you.
             </span>
           </p>
           <p className="text-center text-3xl font-bold tracking-tight md:text-4xl">
-            Extended Desktop:
-            {" "}
-            <span className="text-base font-medium text-muted md:text-lg">
-            Share a clean, controlled view—only the windows you choose.
+            Extended Desktop
+            <span className="mt-1 block text-base font-medium text-muted md:text-lg">
+              Share a clean, controlled view—only the windows you choose.
             </span>
           </p>
         </div>
