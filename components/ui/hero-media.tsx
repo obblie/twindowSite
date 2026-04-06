@@ -29,7 +29,7 @@ export function HeroMedia() {
                   poster={withBasePath("/twindowAd.png")}
                   ariaLabel="twindow product demo video left panel"
                   sources={[
-                    { src: withBasePath("/twindowDemo_a.mov"), type: "video/quicktime" }
+                    { src: withBasePath("/twindowDemo_a.mov"), type: "video/mp4" }
                   ]}
                 />
               </div>
@@ -52,7 +52,7 @@ export function HeroMedia() {
                   poster={withBasePath("/twindowAd.png")}
                   ariaLabel="twindow product demo video right panel"
                   sources={[
-                    { src: withBasePath("/twindowDemo_b.mov"), type: "video/quicktime" }
+                    { src: withBasePath("/twindowDemo_b.mov"), type: "video/mp4" }
                   ]}
                 />
               </div>
