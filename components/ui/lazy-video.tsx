@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 type VideoSource = {
   src: string;
   type: string;
+  media?: string;
 };
 
 type LazyVideoProps = {
@@ -108,6 +109,7 @@ export function LazyVideo({ ariaLabel, className, poster, sources }: LazyVideoPr
   return (
     <div ref={containerRef} className="h-full w-full">
       <video
+        {...({ "webkit-playsinline": "true" } as Record<string, string>)}
         ref={videoRef}
         className={className}
         autoPlay
@@ -118,7 +120,11 @@ export function LazyVideo({ ariaLabel, className, poster, sources }: LazyVideoPr
         poster={poster}
         aria-label={ariaLabel}
       >
-        {shouldLoad ? sources.map((source) => <source key={source.src} src={source.src} type={source.type} />) : null}
+        {shouldLoad
+          ? sources.map((source) => (
+              <source key={`${source.src}-${source.media ?? "default"}`} src={source.src} type={source.type} media={source.media} />
+            ))
+          : null}
       </video>
     </div>
   );
