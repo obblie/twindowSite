@@ -2,18 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { FooterSection } from "@/components/sections/footer-section";
 import { Button } from "@/components/ui/button";
-
-const checkoutUrl = process.env.NEXT_PUBLIC_LEMON_SQUEEZY_CHECKOUT_URL ?? "";
-const checkoutOverlayUrl = checkoutUrl
-  ? `${checkoutUrl}${checkoutUrl.includes("?") ? "&" : "?"}embed=1&logo=0`
-  : "";
+import { getCheckoutOverlayUrl, getLifetimeProduct } from "@/lib/lemonsqueezy";
 
 export const metadata: Metadata = {
   title: "Upgrade | twindow",
   description: "Buy a twindow license and activate it in the app with your emailed license key."
 };
 
-export default function UpgradePage() {
+export default async function UpgradePage() {
+  const product = await getLifetimeProduct();
+  const checkoutUrl = getCheckoutOverlayUrl(product.checkoutUrl);
+
   return (
     <>
       <header className="border-b border-border/70 bg-surface/80 backdrop-blur-xl">
@@ -61,14 +60,9 @@ export default function UpgradePage() {
           </section>
 
           <section className="space-y-3">
-            <Button href={checkoutOverlayUrl || "#"} className="w-full sm:w-auto lemonsqueezy-button">
+            <Button href={checkoutUrl} className="w-full sm:w-auto lemonsqueezy-button">
               Buy Now
             </Button>
-            {!checkoutUrl ? (
-              <p className="text-sm text-muted">
-                Checkout link is not configured yet. Set <code>NEXT_PUBLIC_LEMON_SQUEEZY_CHECKOUT_URL</code>.
-              </p>
-            ) : null}
           </section>
         </article>
       </main>

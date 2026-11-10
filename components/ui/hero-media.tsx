@@ -26,11 +26,13 @@ export function HeroMedia() {
               <div className="relative overflow-hidden">
                 <LazyVideo
                   className="block h-auto w-full bg-transparent"
-                  poster={withBasePath("/twindowAd.png")}
+                  poster={withBasePath("/twindowAd.webp")}
                   ariaLabel="twindow product demo video left panel"
                   sources={[
-                    { src: withBasePath("/twindowDemo_a.mov"), type: "video/quicktime", media: "(min-width: 769px)" },
-                    { src: withBasePath("/twindowDemo_a.mp4"), type: "video/mp4", media: "(max-width: 768px)" }
+                    { src: withBasePath("/twindowDemo_a-mobile.webm"), type: "video/webm", media: "(max-width: 768px)" },
+                    { src: withBasePath("/twindowDemo_a-mobile.mp4"), type: "video/mp4", media: "(max-width: 768px)" },
+                    { src: withBasePath("/twindowDemo_a-desktop.webm"), type: "video/webm", media: "(min-width: 769px)" },
+                    { src: withBasePath("/twindowDemo_a.mp4"), type: "video/mp4" }
                   ]}
                 />
               </div>
@@ -50,11 +52,13 @@ export function HeroMedia() {
               <div className="relative overflow-hidden">
                 <LazyVideo
                   className="block h-auto w-full bg-transparent"
-                  poster={withBasePath("/twindowAd.png")}
+                  poster={withBasePath("/twindowAd.webp")}
                   ariaLabel="twindow product demo video right panel"
                   sources={[
-                    { src: withBasePath("/twindowDemo_b.mov"), type: "video/quicktime", media: "(min-width: 769px)" },
-                    { src: withBasePath("/twindowDemo_b.mp4"), type: "video/mp4", media: "(max-width: 768px)" }
+                    { src: withBasePath("/twindowDemo_b-mobile.webm"), type: "video/webm", media: "(max-width: 768px)" },
+                    { src: withBasePath("/twindowDemo_b-mobile.mp4"), type: "video/mp4", media: "(max-width: 768px)" },
+                    { src: withBasePath("/twindowDemo_b-desktop.webm"), type: "video/webm", media: "(min-width: 769px)" },
+                    { src: withBasePath("/twindowDemo_b.mp4"), type: "video/mp4" }
                   ]}
                 />
               </div>
