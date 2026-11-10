@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { MetaPixel } from "@/components/analytics/meta-pixel";
 import {
   Assistant,
   Barlow,
@@ -326,6 +327,7 @@ export default function RootLayout({
         ].join(" ")}
       >
         <Script src="https://assets.lemonsqueezy.com/lemon.js" strategy="afterInteractive" />
+        <MetaPixel />
         {children}
       </body>
     </html>
